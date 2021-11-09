@@ -1,63 +1,44 @@
-2021-11-09 12:52:20.954  INFO 5852 --- [main] com.example.Application                  : Starting Application on DESKTOP-P9FGH2M with PID 5852 (E:\SOA\jiagou\filmBuy\target\classes started by xiayu in E:\SOA\jiagou\filmBuy)
-2021-11-09 12:52:20.987  INFO 5852 --- [main] com.example.Application                  : No active profile set, falling back to default profiles: default
-2021-11-09 12:52:22.564  WARN 5852 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.example]' package. Please check your configuration.
-2021-11-09 12:52:23.524  INFO 5852 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
-2021-11-09 12:52:23.539  INFO 5852 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-11-09 12:52:23.586  INFO 5852 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/9.0.12
-2021-11-09 12:52:23.600  INFO 5852 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_161\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Python310\Scripts\;C:\Python310\;E:\QT5.8\5.8\mingw53_32\bin;E:\QT5.8\Tools\mingw530_32\bin;C:\Python27\;C:\Python27\Scripts;F:\Anaconda;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;W:\cocos2d-x-3.17\tools\cocos2d-console\bin;C:\Users\xiayu\AppData\Local\Programs\Python\Python36;C:\Users\xiayu\AppData\Local\Programs\Python\Python36\Scripts;D:\visual\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin;C:\Program Files\Git\cmd;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\ProgramData\chocolatey\bin;F:\opencv\build\x64\vc15\bin;F:\QT2\5.14.1\msvc2017_64\bin;D:\ffmpeg\ffmpeg-20200604-7f81785-win64-static\bin;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;E:\SOA\gradle-6.8.3-all\bin;E:\jdk-11\jre-11.0.5\bin;E:\jdk-11\bin;E:\node.js\;W:\cocos2d-x-3.17\templates;W:\cocos2d-x-3.17\tools\cocos2d-console\bin;C:\Users\xiayu\AppData\Local\Microsoft\WindowsApps;C:\Users\xiayu\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\CMake\bin;D:\modelsim\win64;F:\PyCharm Community Edition 2019.1.3\bin;;C:\Program Files\Bandizip\;E:\SOA\gradle-6.8.3-all\bin;E:\jdk-11\bin;F:\IntelliJ IDEA 2020.2.1\bin;;C:\Users\xiayu\AppData\Roaming\npm;.]
-2021-11-09 12:52:23.845  INFO 5852 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-11-09 12:52:23.846  INFO 5852 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2780 ms
-2021-11-09 12:52:23.886  INFO 5852 --- [main] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
-2021-11-09 12:52:23.899  INFO 5852 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
-2021-11-09 12:52:23.901  INFO 5852 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2021-11-09 12:52:23.905  INFO 5852 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'formContentFilter' to: [/*]
-2021-11-09 12:52:23.906  INFO 5852 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
-2021-11-09 12:52:25.558  INFO 5852 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-11-09 12:52:26.025  INFO 5852 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
-2021-11-09 12:52:26.033  INFO 5852 --- [main] com.example.Application                  : Started Application in 5.659 seconds (JVM running for 10.104)
-2021-11-09 12:52:26.038  WARN 5852 --- [main] com.example.Application                  : 关注微信公众号：Java开发宝典，每天分享Java干货
-2021-11-09 12:52:26.039  WARN 5852 --- [main] com.example.Application                  : 项目启动后请访问：http://localhost:8888/front/index.html
-2021-11-09 12:52:26.039  WARN 5852 --- [main] com.example.Application                  : 登录账号：admin   登录密码：12345
-2021-11-09 12:54:08.902  INFO 5852 --- [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-11-09 12:54:08.902  INFO 5852 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-11-09 12:54:09.055  INFO 5852 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 152 ms
-2021-11-09 12:54:10.278  INFO 5852 --- [http-nio-8888-exec-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-11-09 12:54:10.819  INFO 5852 --- [http-nio-8888-exec-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-11-09 12:54:34.355 ERROR 5852 --- [http-nio-8888-exec-8] c.e.exception.GlobalExceptionHandler     : 异常信息：
+2021-11-10 00:34:53.211  WARN 23508 --- [http-nio-8888-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@61855d32 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-11-10 00:34:53.257  WARN 23508 --- [http-nio-8888-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@54d9ee06 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-11-10 00:34:53.259  WARN 23508 --- [http-nio-8888-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@b5ec1b5 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-11-10 00:34:58.226  WARN 23508 --- [http-nio-8888-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5a22d0f4 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-11-10 00:34:58.259  WARN 23508 --- [http-nio-8888-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@289e8f33 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-11-10 00:34:58.261  WARN 23508 --- [http-nio-8888-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@38a6ec35 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-11-10 00:35:03.229  WARN 23508 --- [http-nio-8888-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5cb47010 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-11-10 00:35:03.261  WARN 23508 --- [http-nio-8888-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5f6bd1d2 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-11-10 00:35:03.263  WARN 23508 --- [http-nio-8888-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@62c7978 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-11-10 00:35:25.995  INFO 23428 --- [main] com.example.Application                  : Starting Application on DESKTOP-P9FGH2M with PID 23428 (E:\SOA\jiagou\filmBuy\target\classes started by xiayu in E:\SOA\jiagou\filmBuy)
+2021-11-10 00:35:25.999  INFO 23428 --- [main] com.example.Application                  : No active profile set, falling back to default profiles: default
+2021-11-10 00:35:26.783  WARN 23428 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.example]' package. Please check your configuration.
+2021-11-10 00:35:27.441  INFO 23428 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2021-11-10 00:35:27.471  INFO 23428 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-10 00:35:27.471  INFO 23428 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/9.0.12
+2021-11-10 00:35:27.478  INFO 23428 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_161\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Python310\Scripts\;C:\Python310\;E:\QT5.8\5.8\mingw53_32\bin;E:\QT5.8\Tools\mingw530_32\bin;C:\Python27\;C:\Python27\Scripts;F:\Anaconda;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;W:\cocos2d-x-3.17\tools\cocos2d-console\bin;C:\Users\xiayu\AppData\Local\Programs\Python\Python36;C:\Users\xiayu\AppData\Local\Programs\Python\Python36\Scripts;D:\visual\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin;C:\Program Files\Git\cmd;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\ProgramData\chocolatey\bin;F:\opencv\build\x64\vc15\bin;F:\QT2\5.14.1\msvc2017_64\bin;D:\ffmpeg\ffmpeg-20200604-7f81785-win64-static\bin;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;E:\SOA\gradle-6.8.3-all\bin;E:\jdk-11\jre-11.0.5\bin;E:\jdk-11\bin;E:\node.js\;W:\cocos2d-x-3.17\templates;W:\cocos2d-x-3.17\tools\cocos2d-console\bin;C:\Users\xiayu\AppData\Local\Microsoft\WindowsApps;C:\Users\xiayu\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\CMake\bin;D:\modelsim\win64;F:\PyCharm Community Edition 2019.1.3\bin;;C:\Program Files\Bandizip\;E:\SOA\gradle-6.8.3-all\bin;E:\jdk-11\bin;F:\IntelliJ IDEA 2020.2.1\bin;;C:\Users\xiayu\AppData\Roaming\npm;.]
+2021-11-10 00:35:27.716  INFO 23428 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-10 00:35:27.717  INFO 23428 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1661 ms
+2021-11-10 00:35:27.760  INFO 23428 --- [main] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2021-11-10 00:35:27.766  INFO 23428 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2021-11-10 00:35:27.767  INFO 23428 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2021-11-10 00:35:27.768  INFO 23428 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'formContentFilter' to: [/*]
+2021-11-10 00:35:27.769  INFO 23428 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2021-11-10 00:35:29.172  INFO 23428 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-11-10 00:35:29.542  INFO 23428 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2021-11-10 00:35:29.546  INFO 23428 --- [main] com.example.Application                  : Started Application in 3.924 seconds (JVM running for 7.933)
+2021-11-10 00:35:29.548  WARN 23428 --- [main] com.example.Application                  : 项目启动后请访问：http://localhost:8888/front/index.html
+2021-11-10 00:35:29.549  WARN 23428 --- [main] com.example.Application                  : 登录账号：admin   登录密码：12345
+2021-11-10 00:35:47.653  INFO 23428 --- [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-10 00:35:47.654  INFO 23428 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-11-10 00:35:47.665  INFO 23428 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2021-11-10 00:35:48.753  INFO 23428 --- [http-nio-8888-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-10 00:35:49.517  INFO 23428 --- [http-nio-8888-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-10 00:37:46.153 ERROR 23428 --- [http-nio-8888-exec-1] c.e.exception.GlobalExceptionHandler     : 异常信息：
 
-org.apache.catalina.connector.ClientAbortException: java.io.IOException: 你的主机中的软件中止了一个已建立的连接。
-	at org.apache.catalina.connector.OutputBuffer.realWriteBytes(OutputBuffer.java:333) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
-	at org.apache.catalina.connector.OutputBuffer.flushByteBuffer(OutputBuffer.java:758) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
-	at org.apache.catalina.connector.OutputBuffer.append(OutputBuffer.java:663) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
-	at org.apache.catalina.connector.OutputBuffer.writeBytes(OutputBuffer.java:368) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
-	at org.apache.catalina.connector.OutputBuffer.write(OutputBuffer.java:346) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
-	at org.apache.catalina.connector.CoyoteOutputStream.write(CoyoteOutputStream.java:96) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
-	at com.fasterxml.jackson.core.json.UTF8JsonGenerator._flushBuffer(UTF8JsonGenerator.java:2085) ~[jackson-core-2.9.7.jar:2.9.7]
-	at com.fasterxml.jackson.core.json.UTF8JsonGenerator._writeStringSegments(UTF8JsonGenerator.java:1226) ~[jackson-core-2.9.7.jar:2.9.7]
-	at com.fasterxml.jackson.core.json.UTF8JsonGenerator.writeString(UTF8JsonGenerator.java:453) ~[jackson-core-2.9.7.jar:2.9.7]
-	at com.fasterxml.jackson.databind.ser.std.StringSerializer.serialize(StringSerializer.java:41) ~[jackson-databind-2.9.7.jar:2.9.7]
-	at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:727) ~[jackson-databind-2.9.7.jar:2.9.7]
-	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:719) ~[jackson-databind-2.9.7.jar:2.9.7]
-	at com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:155) ~[jackson-databind-2.9.7.jar:2.9.7]
-	at com.fasterxml.jackson.databind.ser.impl.IndexedListSerializer.serializeContents(IndexedListSerializer.java:119) ~[jackson-databind-2.9.7.jar:2.9.7]
-	at com.fasterxml.jackson.databind.ser.impl.IndexedListSerializer.serialize(IndexedListSerializer.java:79) ~[jackson-databind-2.9.7.jar:2.9.7]
-	at com.fasterxml.jackson.databind.ser.impl.IndexedListSerializer.serialize(IndexedListSerializer.java:18) ~[jackson-databind-2.9.7.jar:2.9.7]
-	at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:727) ~[jackson-databind-2.9.7.jar:2.9.7]
-	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:719) ~[jackson-databind-2.9.7.jar:2.9.7]
-	at com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:155) ~[jackson-databind-2.9.7.jar:2.9.7]
-	at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:727) ~[jackson-databind-2.9.7.jar:2.9.7]
-	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:719) ~[jackson-databind-2.9.7.jar:2.9.7]
-	at com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:155) ~[jackson-databind-2.9.7.jar:2.9.7]
-	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider._serialize(DefaultSerializerProvider.java:480) ~[jackson-databind-2.9.7.jar:2.9.7]
-	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:319) ~[jackson-databind-2.9.7.jar:2.9.7]
-	at com.fasterxml.jackson.databind.ObjectWriter$Prefetch.serialize(ObjectWriter.java:1396) ~[jackson-databind-2.9.7.jar:2.9.7]
-	at com.fasterxml.jackson.databind.ObjectWriter.writeValue(ObjectWriter.java:913) ~[jackson-databind-2.9.7.jar:2.9.7]
-	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.writeInternal(AbstractJackson2HttpMessageConverter.java:287) ~[spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
-	at org.springframework.http.converter.AbstractGenericHttpMessageConverter.write(AbstractGenericHttpMessageConverter.java:103) ~[spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:289) ~[spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.handleReturnValue(RequestResponseBodyMethodProcessor.java:180) ~[spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
-	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:82) ~[spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:119) ~[spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "all"
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:132) ~[spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:124) ~[spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:165) ~[spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102) ~[spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
 	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
 	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800) ~[spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
 	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
@@ -105,52 +86,60 @@ org.apache.catalina.connector.ClientAbortException: java.io.IOException: 你的�
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_161]
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.12.jar:9.0.12]
 	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_161]
-Caused by: java.io.IOException: 你的主机中的软件中止了一个已建立的连接。
-	at sun.nio.ch.SocketDispatcher.write0(Native Method) ~[na:1.8.0_161]
-	at sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:51) ~[na:1.8.0_161]
-	at sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:93) ~[na:1.8.0_161]
-	at sun.nio.ch.IOUtil.write(IOUtil.java:65) ~[na:1.8.0_161]
-	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:471) ~[na:1.8.0_161]
-	at org.apache.tomcat.util.net.NioChannel.write(NioChannel.java:134) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
-	at org.apache.tomcat.util.net.NioBlockingSelector.write(NioBlockingSelector.java:101) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
-	at org.apache.tomcat.util.net.NioSelectorPool.write(NioSelectorPool.java:157) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
-	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.doWrite(NioEndpoint.java:1223) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
-	at org.apache.tomcat.util.net.SocketWrapperBase.doWrite(SocketWrapperBase.java:743) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
-	at org.apache.tomcat.util.net.SocketWrapperBase.writeBlocking(SocketWrapperBase.java:513) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
-	at org.apache.tomcat.util.net.SocketWrapperBase.write(SocketWrapperBase.java:451) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
-	at org.apache.coyote.http11.Http11OutputBuffer$SocketOutputBuffer.doWrite(Http11OutputBuffer.java:530) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
-	at org.apache.coyote.http11.filters.ChunkedOutputFilter.doWrite(ChunkedOutputFilter.java:112) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
-	at org.apache.coyote.http11.Http11OutputBuffer.doWrite(Http11OutputBuffer.java:189) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
-	at org.apache.coyote.Response.doWrite(Response.java:599) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
-	at org.apache.catalina.connector.OutputBuffer.realWriteBytes(OutputBuffer.java:328) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
-	... 78 common frames omitted
+Caused by: java.lang.NumberFormatException: For input string: "all"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65) ~[na:1.8.0_161]
+	at java.lang.Long.parseLong(Long.java:589) ~[na:1.8.0_161]
+	at java.lang.Long.valueOf(Long.java:803) ~[na:1.8.0_161]
+	at org.springframework.util.NumberUtils.parseNumber(NumberUtils.java:213) ~[spring-core-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.propertyeditors.CustomNumberEditor.setAsText(CustomNumberEditor.java:115) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.TypeConverterDelegate.doConvertTextValue(TypeConverterDelegate.java:466) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.TypeConverterDelegate.doConvertValue(TypeConverterDelegate.java:439) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:192) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:99) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.TypeConverterSupport.doConvert(TypeConverterSupport.java:73) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:52) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:692) ~[spring-context-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:124) ~[spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	... 51 common frames omitted
 
-2021-11-09 12:54:34.357  WARN 5852 --- [http-nio-8888-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Failure in @ExceptionHandler public com.example.common.Result com.example.exception.GlobalExceptionHandler.error(javax.servlet.http.HttpServletRequest,java.lang.Exception)
+2021-11-10 00:50:18.219 DEBUG 9404 --- [background-preinit] .h.v.m.ResourceBundleMessageInterpolator : Loaded expression factory via original TCCL
+2021-11-10 00:50:18.310  INFO 9404 --- [main] com.example.Application                  : Starting Application on DESKTOP-P9FGH2M with PID 9404 (E:\SOA\jiagou\filmBuy\target\classes started by xiayu in E:\SOA\jiagou\filmBuy)
+2021-11-10 00:50:18.312  INFO 9404 --- [main] com.example.Application                  : No active profile set, falling back to default profiles: default
+2021-11-10 00:50:19.056  WARN 9404 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.example]' package. Please check your configuration.
+2021-11-10 00:50:20.014  INFO 9404 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2021-11-10 00:50:20.056  INFO 9404 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-10 00:50:20.056  INFO 9404 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/9.0.12
+2021-11-10 00:50:20.065  INFO 9404 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_161\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Python310\Scripts\;C:\Python310\;E:\QT5.8\5.8\mingw53_32\bin;E:\QT5.8\Tools\mingw530_32\bin;C:\Python27\;C:\Python27\Scripts;F:\Anaconda;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;W:\cocos2d-x-3.17\tools\cocos2d-console\bin;C:\Users\xiayu\AppData\Local\Programs\Python\Python36;C:\Users\xiayu\AppData\Local\Programs\Python\Python36\Scripts;D:\visual\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin;C:\Program Files\Git\cmd;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\ProgramData\chocolatey\bin;F:\opencv\build\x64\vc15\bin;F:\QT2\5.14.1\msvc2017_64\bin;D:\ffmpeg\ffmpeg-20200604-7f81785-win64-static\bin;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;E:\SOA\gradle-6.8.3-all\bin;E:\jdk-11\jre-11.0.5\bin;E:\jdk-11\bin;E:\node.js\;W:\cocos2d-x-3.17\templates;W:\cocos2d-x-3.17\tools\cocos2d-console\bin;C:\Users\xiayu\AppData\Local\Microsoft\WindowsApps;C:\Users\xiayu\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\CMake\bin;D:\modelsim\win64;F:\PyCharm Community Edition 2019.1.3\bin;;C:\Program Files\Bandizip\;E:\SOA\gradle-6.8.3-all\bin;E:\jdk-11\bin;F:\IntelliJ IDEA 2020.2.1\bin;;C:\Users\xiayu\AppData\Roaming\npm;.]
+2021-11-10 00:50:20.314  INFO 9404 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-10 00:50:20.314  INFO 9404 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1947 ms
+2021-11-10 00:50:20.352  INFO 9404 --- [main] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2021-11-10 00:50:20.359  INFO 9404 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2021-11-10 00:50:20.359  INFO 9404 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2021-11-10 00:50:20.360  INFO 9404 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'formContentFilter' to: [/*]
+2021-11-10 00:50:20.360  INFO 9404 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2021-11-10 00:50:22.193  INFO 9404 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-11-10 00:50:22.584  INFO 9404 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2021-11-10 00:50:22.589  INFO 9404 --- [main] com.example.Application                  : Started Application in 4.726 seconds (JVM running for 8.689)
+2021-11-10 00:50:22.593  WARN 9404 --- [main] com.example.Application                  : 项目启动后请访问：http://localhost:8888/front/index.html
+2021-11-10 00:50:22.593  WARN 9404 --- [main] com.example.Application                  : 登录账号：admin   登录密码：12345
+2021-11-10 00:50:30.799  INFO 9404 --- [http-nio-8888-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-10 00:50:30.800  INFO 9404 --- [http-nio-8888-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-11-10 00:50:30.811  INFO 9404 --- [http-nio-8888-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2021-11-10 00:50:31.195  INFO 9404 --- [http-nio-8888-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-10 00:50:31.681  INFO 9404 --- [http-nio-8888-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-10 00:50:34.396 ERROR 9404 --- [http-nio-8888-exec-8] c.e.exception.GlobalExceptionHandler     : 异常信息：
 
-org.apache.catalina.connector.ClientAbortException: java.io.IOException: 你的主机中的软件中止了一个已建立的连接。
-	at org.apache.catalina.connector.OutputBuffer.realWriteBytes(OutputBuffer.java:333) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
-	at org.apache.catalina.connector.OutputBuffer.flushByteBuffer(OutputBuffer.java:758) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
-	at org.apache.catalina.connector.OutputBuffer.append(OutputBuffer.java:663) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
-	at org.apache.catalina.connector.OutputBuffer.writeBytes(OutputBuffer.java:368) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
-	at org.apache.catalina.connector.OutputBuffer.write(OutputBuffer.java:346) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
-	at org.apache.catalina.connector.CoyoteOutputStream.write(CoyoteOutputStream.java:96) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
-	at com.fasterxml.jackson.core.json.UTF8JsonGenerator._flushBuffer(UTF8JsonGenerator.java:2085) ~[jackson-core-2.9.7.jar:2.9.7]
-	at com.fasterxml.jackson.core.json.UTF8JsonGenerator.flush(UTF8JsonGenerator.java:1097) ~[jackson-core-2.9.7.jar:2.9.7]
-	at com.fasterxml.jackson.databind.ObjectWriter.writeValue(ObjectWriter.java:915) ~[jackson-databind-2.9.7.jar:2.9.7]
-	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.writeInternal(AbstractJackson2HttpMessageConverter.java:287) ~[spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
-	at org.springframework.http.converter.AbstractGenericHttpMessageConverter.write(AbstractGenericHttpMessageConverter.java:103) ~[spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:289) ~[spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.handleReturnValue(RequestResponseBodyMethodProcessor.java:180) ~[spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
-	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:82) ~[spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:119) ~[spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:408) ~[spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:61) [spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:136) [spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
-	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:80) [spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1297) [spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1109) [spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1055) [spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942) [spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "all"
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:132) ~[spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:124) ~[spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:165) ~[spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102) ~[spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800) ~[spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038) ~[spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942) ~[spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998) [spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
 	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:890) [spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) [tomcat-embed-core-9.0.12.jar:9.0.12]
@@ -193,100 +182,280 @@ org.apache.catalina.connector.ClientAbortException: java.io.IOException: 你的�
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_161]
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.12.jar:9.0.12]
 	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_161]
-Caused by: java.io.IOException: 你的主机中的软件中止了一个已建立的连接。
-	at sun.nio.ch.SocketDispatcher.write0(Native Method) ~[na:1.8.0_161]
-	at sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:51) ~[na:1.8.0_161]
-	at sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:93) ~[na:1.8.0_161]
-	at sun.nio.ch.IOUtil.write(IOUtil.java:65) ~[na:1.8.0_161]
-	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:471) ~[na:1.8.0_161]
-	at org.apache.tomcat.util.net.NioChannel.write(NioChannel.java:134) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
-	at org.apache.tomcat.util.net.NioBlockingSelector.write(NioBlockingSelector.java:101) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
-	at org.apache.tomcat.util.net.NioSelectorPool.write(NioSelectorPool.java:157) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
-	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.doWrite(NioEndpoint.java:1223) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
-	at org.apache.tomcat.util.net.SocketWrapperBase.doWrite(SocketWrapperBase.java:743) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
-	at org.apache.tomcat.util.net.SocketWrapperBase.writeBlocking(SocketWrapperBase.java:513) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
-	at org.apache.tomcat.util.net.SocketWrapperBase.write(SocketWrapperBase.java:451) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
-	at org.apache.coyote.http11.Http11OutputBuffer$SocketOutputBuffer.doWrite(Http11OutputBuffer.java:530) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
-	at org.apache.coyote.http11.filters.ChunkedOutputFilter.doWrite(ChunkedOutputFilter.java:110) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
-	at org.apache.coyote.http11.Http11OutputBuffer.doWrite(Http11OutputBuffer.java:189) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
-	at org.apache.coyote.Response.doWrite(Response.java:599) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
-	at org.apache.catalina.connector.OutputBuffer.realWriteBytes(OutputBuffer.java:328) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
-	... 64 common frames omitted
+Caused by: java.lang.NumberFormatException: For input string: "all"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65) ~[na:1.8.0_161]
+	at java.lang.Long.parseLong(Long.java:589) ~[na:1.8.0_161]
+	at java.lang.Long.valueOf(Long.java:803) ~[na:1.8.0_161]
+	at org.springframework.util.NumberUtils.parseNumber(NumberUtils.java:213) ~[spring-core-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.propertyeditors.CustomNumberEditor.setAsText(CustomNumberEditor.java:115) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.TypeConverterDelegate.doConvertTextValue(TypeConverterDelegate.java:466) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.TypeConverterDelegate.doConvertValue(TypeConverterDelegate.java:439) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:192) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:99) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.TypeConverterSupport.doConvert(TypeConverterSupport.java:73) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:52) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:692) ~[spring-context-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:124) ~[spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	... 51 common frames omitted
 
-2021-11-09 19:59:02.934  INFO 9004 --- [main] com.example.Application                  : Starting Application on DESKTOP-P9FGH2M with PID 9004 (E:\SOA\jiagou\filmBuy\target\classes started by xiayu in E:\SOA\jiagou\filmBuy)
-2021-11-09 19:59:03.145  INFO 9004 --- [main] com.example.Application                  : No active profile set, falling back to default profiles: default
-2021-11-09 19:59:03.830  WARN 9004 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.example]' package. Please check your configuration.
-2021-11-09 19:59:05.002  INFO 9004 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
-2021-11-09 19:59:05.021  INFO 9004 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-11-09 19:59:05.022  INFO 9004 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/9.0.12
-2021-11-09 19:59:05.029  INFO 9004 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_161\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Python310\Scripts\;C:\Python310\;E:\QT5.8\5.8\mingw53_32\bin;E:\QT5.8\Tools\mingw530_32\bin;C:\Python27\;C:\Python27\Scripts;F:\Anaconda;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;W:\cocos2d-x-3.17\tools\cocos2d-console\bin;C:\Users\xiayu\AppData\Local\Programs\Python\Python36;C:\Users\xiayu\AppData\Local\Programs\Python\Python36\Scripts;D:\visual\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin;C:\Program Files\Git\cmd;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\ProgramData\chocolatey\bin;F:\opencv\build\x64\vc15\bin;F:\QT2\5.14.1\msvc2017_64\bin;D:\ffmpeg\ffmpeg-20200604-7f81785-win64-static\bin;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;E:\SOA\gradle-6.8.3-all\bin;E:\jdk-11\jre-11.0.5\bin;E:\jdk-11\bin;E:\node.js\;W:\cocos2d-x-3.17\templates;W:\cocos2d-x-3.17\tools\cocos2d-console\bin;C:\Users\xiayu\AppData\Local\Microsoft\WindowsApps;C:\Users\xiayu\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\CMake\bin;D:\modelsim\win64;F:\PyCharm Community Edition 2019.1.3\bin;;C:\Program Files\Bandizip\;E:\SOA\gradle-6.8.3-all\bin;E:\jdk-11\bin;F:\IntelliJ IDEA 2020.2.1\bin;;C:\Users\xiayu\AppData\Roaming\npm;.]
-2021-11-09 19:59:05.266  INFO 9004 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-11-09 19:59:05.266  INFO 9004 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2075 ms
-2021-11-09 19:59:05.312  INFO 9004 --- [main] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
-2021-11-09 19:59:05.321  INFO 9004 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
-2021-11-09 19:59:05.322  INFO 9004 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2021-11-09 19:59:05.322  INFO 9004 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'formContentFilter' to: [/*]
-2021-11-09 19:59:05.323  INFO 9004 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
-2021-11-09 19:59:07.696  INFO 9004 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-11-09 19:59:08.221  INFO 9004 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
-2021-11-09 19:59:08.225  INFO 9004 --- [main] com.example.Application                  : Started Application in 5.765 seconds (JVM running for 10.644)
-2021-11-09 19:59:08.229  WARN 9004 --- [main] com.example.Application                  : 项目启动后请访问：http://localhost:8888/front/index.html
-2021-11-09 19:59:08.229  WARN 9004 --- [main] com.example.Application                  : 登录账号：admin   登录密码：12345
-2021-11-09 20:00:26.336  INFO 9004 --- [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-11-09 20:00:26.338  INFO 9004 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-11-09 20:00:26.359  INFO 9004 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 19 ms
-2021-11-09 20:00:28.275  INFO 9004 --- [http-nio-8888-exec-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-11-09 20:00:32.526  INFO 9004 --- [http-nio-8888-exec-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-11-09 21:41:29.651  WARN 9004 --- [http-nio-8888-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1496827e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-11-09 21:41:29.651  WARN 9004 --- [http-nio-8888-exec-7] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@a8de4d5 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-11-09 21:41:29.651  WARN 9004 --- [http-nio-8888-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@46902347 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-11-09 21:41:36.635  WARN 9004 --- [http-nio-8888-exec-7] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@8aff7cd (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-11-09 21:41:36.635  WARN 9004 --- [http-nio-8888-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4dbfb4cb (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-11-09 21:41:36.844  WARN 9004 --- [http-nio-8888-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@29cc8505 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-11-09 21:41:41.931  WARN 9004 --- [http-nio-8888-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@599785df (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-11-09 21:41:42.152  WARN 9004 --- [http-nio-8888-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@30070a07 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-11-09 21:41:42.254  WARN 9004 --- [http-nio-8888-exec-7] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@49dfe820 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-11-09 21:41:47.830  WARN 9004 --- [http-nio-8888-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@693cab1b (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-11-09 21:43:40.870  INFO 9380 --- [main] com.example.Application                  : Starting Application on DESKTOP-P9FGH2M with PID 9380 (E:\SOA\jiagou\filmBuy\target\classes started by xiayu in E:\SOA\jiagou\filmBuy)
-2021-11-09 21:43:40.875  INFO 9380 --- [main] com.example.Application                  : No active profile set, falling back to default profiles: default
-2021-11-09 21:43:41.688  WARN 9380 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.example]' package. Please check your configuration.
-2021-11-09 21:43:42.514  INFO 9380 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
-2021-11-09 21:43:42.679  INFO 9380 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-11-09 21:43:42.679  INFO 9380 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/9.0.12
-2021-11-09 21:43:42.690  INFO 9380 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_161\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Python310\Scripts\;C:\Python310\;E:\QT5.8\5.8\mingw53_32\bin;E:\QT5.8\Tools\mingw530_32\bin;C:\Python27\;C:\Python27\Scripts;F:\Anaconda;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;W:\cocos2d-x-3.17\tools\cocos2d-console\bin;C:\Users\xiayu\AppData\Local\Programs\Python\Python36;C:\Users\xiayu\AppData\Local\Programs\Python\Python36\Scripts;D:\visual\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin;C:\Program Files\Git\cmd;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\ProgramData\chocolatey\bin;F:\opencv\build\x64\vc15\bin;F:\QT2\5.14.1\msvc2017_64\bin;D:\ffmpeg\ffmpeg-20200604-7f81785-win64-static\bin;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;E:\SOA\gradle-6.8.3-all\bin;E:\jdk-11\jre-11.0.5\bin;E:\jdk-11\bin;E:\node.js\;W:\cocos2d-x-3.17\templates;W:\cocos2d-x-3.17\tools\cocos2d-console\bin;C:\Users\xiayu\AppData\Local\Microsoft\WindowsApps;C:\Users\xiayu\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\CMake\bin;D:\modelsim\win64;F:\PyCharm Community Edition 2019.1.3\bin;;C:\Program Files\Bandizip\;E:\SOA\gradle-6.8.3-all\bin;E:\jdk-11\bin;F:\IntelliJ IDEA 2020.2.1\bin;;C:\Users\xiayu\AppData\Roaming\npm;.]
-2021-11-09 21:43:42.967  INFO 9380 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-11-09 21:43:42.967  INFO 9380 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2030 ms
-2021-11-09 21:43:42.992  INFO 9380 --- [main] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
-2021-11-09 21:43:42.997  INFO 9380 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
-2021-11-09 21:43:42.997  INFO 9380 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2021-11-09 21:43:42.997  INFO 9380 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'formContentFilter' to: [/*]
-2021-11-09 21:43:42.997  INFO 9380 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
-2021-11-09 21:43:44.534  INFO 9380 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-11-09 21:43:44.923  INFO 9380 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
-2021-11-09 21:43:44.926  INFO 9380 --- [main] com.example.Application                  : Started Application in 4.58 seconds (JVM running for 9.221)
-2021-11-09 21:43:44.929  WARN 9380 --- [main] com.example.Application                  : 项目启动后请访问：http://localhost:8888/front/index.html
-2021-11-09 21:43:44.929  WARN 9380 --- [main] com.example.Application                  : 登录账号：admin   登录密码：12345
-2021-11-09 21:43:45.128  INFO 9380 --- [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-11-09 21:43:45.128  INFO 9380 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-11-09 21:43:45.141  INFO 9380 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
-2021-11-09 21:43:47.313  INFO 9380 --- [http-nio-8888-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-11-09 21:43:48.060  INFO 9380 --- [http-nio-8888-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-11-09 21:47:01.752  INFO 21468 --- [main] com.example.Application                  : Starting Application on DESKTOP-P9FGH2M with PID 21468 (E:\SOA\jiagou\filmBuy\target\classes started by xiayu in E:\SOA\jiagou\filmBuy)
-2021-11-09 21:47:01.756  INFO 21468 --- [main] com.example.Application                  : No active profile set, falling back to default profiles: default
-2021-11-09 21:47:02.596  WARN 21468 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.example]' package. Please check your configuration.
-2021-11-09 21:47:03.375  INFO 21468 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
-2021-11-09 21:47:03.408  INFO 21468 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-11-09 21:47:03.408  INFO 21468 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/9.0.12
-2021-11-09 21:47:03.414  INFO 21468 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_161\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Python310\Scripts\;C:\Python310\;E:\QT5.8\5.8\mingw53_32\bin;E:\QT5.8\Tools\mingw530_32\bin;C:\Python27\;C:\Python27\Scripts;F:\Anaconda;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;W:\cocos2d-x-3.17\tools\cocos2d-console\bin;C:\Users\xiayu\AppData\Local\Programs\Python\Python36;C:\Users\xiayu\AppData\Local\Programs\Python\Python36\Scripts;D:\visual\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin;C:\Program Files\Git\cmd;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\ProgramData\chocolatey\bin;F:\opencv\build\x64\vc15\bin;F:\QT2\5.14.1\msvc2017_64\bin;D:\ffmpeg\ffmpeg-20200604-7f81785-win64-static\bin;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;E:\SOA\gradle-6.8.3-all\bin;E:\jdk-11\jre-11.0.5\bin;E:\jdk-11\bin;E:\node.js\;W:\cocos2d-x-3.17\templates;W:\cocos2d-x-3.17\tools\cocos2d-console\bin;C:\Users\xiayu\AppData\Local\Microsoft\WindowsApps;C:\Users\xiayu\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\CMake\bin;D:\modelsim\win64;F:\PyCharm Community Edition 2019.1.3\bin;;C:\Program Files\Bandizip\;E:\SOA\gradle-6.8.3-all\bin;E:\jdk-11\bin;F:\IntelliJ IDEA 2020.2.1\bin;;C:\Users\xiayu\AppData\Roaming\npm;.]
-2021-11-09 21:47:03.635  INFO 21468 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-11-09 21:47:03.636  INFO 21468 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1818 ms
-2021-11-09 21:47:03.677  INFO 21468 --- [main] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
-2021-11-09 21:47:03.683  INFO 21468 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
-2021-11-09 21:47:03.684  INFO 21468 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2021-11-09 21:47:03.684  INFO 21468 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'formContentFilter' to: [/*]
-2021-11-09 21:47:03.684  INFO 21468 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
-2021-11-09 21:47:04.935  INFO 21468 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-11-09 21:47:05.231  INFO 21468 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
-2021-11-09 21:47:05.234  INFO 21468 --- [main] com.example.Application                  : Started Application in 4.069 seconds (JVM running for 8.079)
-2021-11-09 21:47:05.237  WARN 21468 --- [main] com.example.Application                  : 项目启动后请访问：http://localhost:8888/front/index.html
-2021-11-09 21:47:05.237  WARN 21468 --- [main] com.example.Application                  : 登录账号：admin   登录密码：12345
+2021-11-10 00:51:27.923 ERROR 9404 --- [http-nio-8888-exec-9] c.e.exception.GlobalExceptionHandler     : 异常信息：
+
+org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "all"
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:132) ~[spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:124) ~[spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:165) ~[spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102) ~[spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800) ~[spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038) ~[spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942) ~[spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998) [spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:890) [spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875) [spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) [spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92) [spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93) [spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) [spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_161]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_161]
+Caused by: java.lang.NumberFormatException: For input string: "all"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65) ~[na:1.8.0_161]
+	at java.lang.Long.parseLong(Long.java:589) ~[na:1.8.0_161]
+	at java.lang.Long.valueOf(Long.java:803) ~[na:1.8.0_161]
+	at org.springframework.util.NumberUtils.parseNumber(NumberUtils.java:213) ~[spring-core-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.propertyeditors.CustomNumberEditor.setAsText(CustomNumberEditor.java:115) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.TypeConverterDelegate.doConvertTextValue(TypeConverterDelegate.java:466) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.TypeConverterDelegate.doConvertValue(TypeConverterDelegate.java:439) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:192) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:99) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.TypeConverterSupport.doConvert(TypeConverterSupport.java:73) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:52) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:692) ~[spring-context-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:124) ~[spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	... 51 common frames omitted
+
+2021-11-10 00:53:26.186  INFO 19884 --- [main] com.example.Application                  : Starting Application on DESKTOP-P9FGH2M with PID 19884 (E:\SOA\jiagou\filmBuy\target\classes started by xiayu in E:\SOA\jiagou\filmBuy)
+2021-11-10 00:53:26.190  INFO 19884 --- [main] com.example.Application                  : No active profile set, falling back to default profiles: default
+2021-11-10 00:53:26.905  WARN 19884 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.example]' package. Please check your configuration.
+2021-11-10 00:53:27.685  INFO 19884 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2021-11-10 00:53:27.710  INFO 19884 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-10 00:53:27.711  INFO 19884 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/9.0.12
+2021-11-10 00:53:27.717  INFO 19884 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_161\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Python310\Scripts\;C:\Python310\;E:\QT5.8\5.8\mingw53_32\bin;E:\QT5.8\Tools\mingw530_32\bin;C:\Python27\;C:\Python27\Scripts;F:\Anaconda;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;W:\cocos2d-x-3.17\tools\cocos2d-console\bin;C:\Users\xiayu\AppData\Local\Programs\Python\Python36;C:\Users\xiayu\AppData\Local\Programs\Python\Python36\Scripts;D:\visual\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin;C:\Program Files\Git\cmd;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\ProgramData\chocolatey\bin;F:\opencv\build\x64\vc15\bin;F:\QT2\5.14.1\msvc2017_64\bin;D:\ffmpeg\ffmpeg-20200604-7f81785-win64-static\bin;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;E:\SOA\gradle-6.8.3-all\bin;E:\jdk-11\jre-11.0.5\bin;E:\jdk-11\bin;E:\node.js\;W:\cocos2d-x-3.17\templates;W:\cocos2d-x-3.17\tools\cocos2d-console\bin;C:\Users\xiayu\AppData\Local\Microsoft\WindowsApps;C:\Users\xiayu\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\CMake\bin;D:\modelsim\win64;F:\PyCharm Community Edition 2019.1.3\bin;;C:\Program Files\Bandizip\;E:\SOA\gradle-6.8.3-all\bin;E:\jdk-11\bin;F:\IntelliJ IDEA 2020.2.1\bin;;C:\Users\xiayu\AppData\Roaming\npm;.]
+2021-11-10 00:53:27.908  INFO 19884 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-10 00:53:27.908  INFO 19884 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1669 ms
+2021-11-10 00:53:27.936  INFO 19884 --- [main] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2021-11-10 00:53:27.941  INFO 19884 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2021-11-10 00:53:27.942  INFO 19884 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2021-11-10 00:53:27.943  INFO 19884 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'formContentFilter' to: [/*]
+2021-11-10 00:53:27.943  INFO 19884 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2021-11-10 00:53:29.067  INFO 19884 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-11-10 00:53:29.443  INFO 19884 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2021-11-10 00:53:29.449  INFO 19884 --- [main] com.example.Application                  : Started Application in 3.728 seconds (JVM running for 7.388)
+2021-11-10 00:53:29.453  WARN 19884 --- [main] com.example.Application                  : 项目启动后请访问：http://localhost:8888/front/index.html
+2021-11-10 00:53:29.453  WARN 19884 --- [main] com.example.Application                  : 登录账号：admin   登录密码：12345
+2021-11-10 00:53:48.738  INFO 19884 --- [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-10 00:53:48.738  INFO 19884 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-11-10 00:53:48.750  INFO 19884 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2021-11-10 00:53:49.160 ERROR 19884 --- [http-nio-8888-exec-6] c.e.exception.GlobalExceptionHandler     : 异常信息：
+
+org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "all"
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:132) ~[spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:124) ~[spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:165) ~[spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102) ~[spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800) ~[spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038) ~[spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942) ~[spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998) [spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:890) [spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875) [spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) [spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92) [spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93) [spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) [spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_161]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_161]
+Caused by: java.lang.NumberFormatException: For input string: "all"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65) ~[na:1.8.0_161]
+	at java.lang.Long.parseLong(Long.java:589) ~[na:1.8.0_161]
+	at java.lang.Long.valueOf(Long.java:803) ~[na:1.8.0_161]
+	at org.springframework.util.NumberUtils.parseNumber(NumberUtils.java:213) ~[spring-core-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.propertyeditors.CustomNumberEditor.setAsText(CustomNumberEditor.java:115) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.TypeConverterDelegate.doConvertTextValue(TypeConverterDelegate.java:466) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.TypeConverterDelegate.doConvertValue(TypeConverterDelegate.java:439) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:192) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:99) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.TypeConverterSupport.doConvert(TypeConverterSupport.java:73) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:52) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:692) ~[spring-context-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:124) ~[spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	... 51 common frames omitted
+
+2021-11-10 00:53:49.164  INFO 19884 --- [http-nio-8888-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-10 00:53:49.820  INFO 19884 --- [http-nio-8888-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-10 00:56:36.402  INFO 19460 --- [main] com.example.Application                  : Starting Application on DESKTOP-P9FGH2M with PID 19460 (E:\SOA\jiagou\filmBuy\target\classes started by xiayu in E:\SOA\jiagou\filmBuy)
+2021-11-10 00:56:36.406  INFO 19460 --- [main] com.example.Application                  : No active profile set, falling back to default profiles: default
+2021-11-10 00:56:37.053  WARN 19460 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.example]' package. Please check your configuration.
+2021-11-10 00:56:37.691  INFO 19460 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2021-11-10 00:56:37.717  INFO 19460 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-10 00:56:37.717  INFO 19460 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/9.0.12
+2021-11-10 00:56:37.724  INFO 19460 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_161\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Python310\Scripts\;C:\Python310\;E:\QT5.8\5.8\mingw53_32\bin;E:\QT5.8\Tools\mingw530_32\bin;C:\Python27\;C:\Python27\Scripts;F:\Anaconda;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;W:\cocos2d-x-3.17\tools\cocos2d-console\bin;C:\Users\xiayu\AppData\Local\Programs\Python\Python36;C:\Users\xiayu\AppData\Local\Programs\Python\Python36\Scripts;D:\visual\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin;C:\Program Files\Git\cmd;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\ProgramData\chocolatey\bin;F:\opencv\build\x64\vc15\bin;F:\QT2\5.14.1\msvc2017_64\bin;D:\ffmpeg\ffmpeg-20200604-7f81785-win64-static\bin;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;E:\SOA\gradle-6.8.3-all\bin;E:\jdk-11\jre-11.0.5\bin;E:\jdk-11\bin;E:\node.js\;W:\cocos2d-x-3.17\templates;W:\cocos2d-x-3.17\tools\cocos2d-console\bin;C:\Users\xiayu\AppData\Local\Microsoft\WindowsApps;C:\Users\xiayu\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\CMake\bin;D:\modelsim\win64;F:\PyCharm Community Edition 2019.1.3\bin;;C:\Program Files\Bandizip\;E:\SOA\gradle-6.8.3-all\bin;E:\jdk-11\bin;F:\IntelliJ IDEA 2020.2.1\bin;;C:\Users\xiayu\AppData\Roaming\npm;.]
+2021-11-10 00:56:37.915  INFO 19460 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-10 00:56:37.915  INFO 19460 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1467 ms
+2021-11-10 00:56:37.944  INFO 19460 --- [main] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2021-11-10 00:56:37.950  INFO 19460 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2021-11-10 00:56:37.950  INFO 19460 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2021-11-10 00:56:37.950  INFO 19460 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'formContentFilter' to: [/*]
+2021-11-10 00:56:37.951  INFO 19460 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2021-11-10 00:56:39.059  INFO 19460 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-11-10 00:56:39.366  INFO 19460 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2021-11-10 00:56:39.369  INFO 19460 --- [main] com.example.Application                  : Started Application in 3.326 seconds (JVM running for 6.767)
+2021-11-10 00:56:39.372  WARN 19460 --- [main] com.example.Application                  : 项目启动后请访问：http://localhost:8888/front/index.html
+2021-11-10 00:56:39.372  WARN 19460 --- [main] com.example.Application                  : 登录账号：admin   登录密码：12345
+2021-11-10 00:56:46.281  INFO 19460 --- [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-10 00:56:46.281  INFO 19460 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-11-10 00:56:46.291  INFO 19460 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2021-11-10 00:56:46.874 ERROR 19460 --- [http-nio-8888-exec-9] c.e.exception.GlobalExceptionHandler     : 异常信息：
+
+org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "all"
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:132) ~[spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:124) ~[spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:165) ~[spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102) ~[spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800) ~[spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038) ~[spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942) ~[spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998) [spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:890) [spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875) [spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) [spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92) [spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93) [spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) [spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_161]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_161]
+Caused by: java.lang.NumberFormatException: For input string: "all"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65) ~[na:1.8.0_161]
+	at java.lang.Long.parseLong(Long.java:589) ~[na:1.8.0_161]
+	at java.lang.Long.valueOf(Long.java:803) ~[na:1.8.0_161]
+	at org.springframework.util.NumberUtils.parseNumber(NumberUtils.java:213) ~[spring-core-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.propertyeditors.CustomNumberEditor.setAsText(CustomNumberEditor.java:115) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.TypeConverterDelegate.doConvertTextValue(TypeConverterDelegate.java:466) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.TypeConverterDelegate.doConvertValue(TypeConverterDelegate.java:439) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:192) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:99) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.TypeConverterSupport.doConvert(TypeConverterSupport.java:73) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:52) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:692) ~[spring-context-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:124) ~[spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	... 51 common frames omitted
+
+2021-11-10 00:56:46.881  INFO 19460 --- [http-nio-8888-exec-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-10 00:56:47.387  INFO 19460 --- [http-nio-8888-exec-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.

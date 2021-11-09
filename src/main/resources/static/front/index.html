@@ -160,7 +160,7 @@
             <div style="padding: 10px; font-size: 14px">
                 <ul class="nx-goods-container">
                     <li v-for="item in goodsList">
-                        <a :href="'/front/goodsInfo.html?goosdsId=' + item.id" target="_blank">
+                        <a :href="'/front/goodsInfo.html?goodsId=' + item.id" target="_blank">
                             <div><img :src=item.src style="height: 220px"></div>
                             <div style="font-size: 14px; text-align: center">{{item.name}}</div>
                             <div style="font-size: 14px; text-align: center; color: red">￥ {{item.price}}</div>

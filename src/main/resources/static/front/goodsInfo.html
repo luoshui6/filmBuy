@@ -270,12 +270,14 @@
             });
             this.goodsId = this.getQueryVariable('goodsId');
             goodsId = this.goodsId;
+            console.log(this.goodsId);
             this.loadGoodsInfo();
             this.loadComments();
         },
 
         methods: {
             loadGoodsInfo() {
+                console.log("/goodsInfo/" + this.goodsId)
                 axios.get("/goodsInfo/" + this.goodsId).then(res => {
                     if (res.data.code === '0') {
                         this.goodsInfo = res.data.data;
@@ -349,6 +351,7 @@
                                     $('#total').text("￥ " + (tempArr.length * price * discount).toFixed(2));
                                 })
                             } else {
+                                console.log("seatInfo")
                                 msg('error', res.msg);
                             }
                         })
@@ -358,11 +361,13 @@
                 });
             },
             loadComments() {
+                console.log('/commentInfo/all/' + this.goodsId)
                 axios.get('/commentInfo/all/' + this.goodsId).then(res => {
                     if (res.data.code === '0') {
                         this.comments = res.data.data;
                         this.totalComment = this.comments.length;
                     } else {
+                        console.log("commentInfo")
                         alert(res.data.msg)
                     }
                 })
