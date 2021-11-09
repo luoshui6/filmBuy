@@ -13,7 +13,6 @@ public class Application {
     private static final Logger logger = LoggerFactory.getLogger(Application.class);
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
-        logger.warn("关注微信公众号：Java开发宝典，每天分享Java干货");
         logger.warn("项目启动后请访问：http://localhost:8888/front/index.html");
         logger.warn("登录账号：admin   登录密码：12345");
     }
