@@ -1,8 +1,9 @@
 package com.example.entity;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
-public class Account {
+public class Account implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -24,6 +25,24 @@ public class Account {
     private String phone;
     @Transient
     private Double account;
+    @Transient
+    private String salt;
+
+    /**
+     * 获取MD5盐  这里用username+salt实现
+     * @return
+     */
+    public String getSalt() {
+        return name+salt;
+    }
+
+    public String getSalt2() {
+        return salt;
+    }
+
+    public void setSalt(String salt) {
+        this.salt = salt;
+    }
 
     public Long getId() {
         return id;

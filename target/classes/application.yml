@@ -1,18 +1,31 @@
 server:
-  port: 8888
-  connection-timeout: 60000
+  port: 8889
+
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: root
     url: jdbc:mysql://101.34.29.33:3306/b_filmBuy?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false&serverTimezone=GMT%2b8
+    type: com.alibaba.druid.pool.DruidDataSource
   thymeleaf:
     cache: false #关闭缓存
   servlet:
     multipart:
       max-file-size: 100MB
       max-request-size: 100MB
+
+    #整合redis
+  redis:
+    host: 112.124.54.41
+    port: 3377
+    database: 1
+    lettuce:
+      pool:
+        max-active: 1000
+        max-idle: 500
+        max-wait: 500
+    timeout: 5000
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml

@@ -1,6 +1,7 @@
 package com.example.service;
 
 import com.example.dao.AdminInfoDao;
+import com.example.util.PasswordGenerateUtil;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 import com.example.entity.AdminInfo;
@@ -30,9 +31,17 @@ public class AdminInfoService {
         }
         if (StringUtils.isEmpty(adminInfo.getPassword())) {
             // 默认密码123456
-            adminInfo.setPassword(SecureUtil.md5("123456"));
+            String salt = Long.toString(System.currentTimeMillis());
+            adminInfo.setSalt(salt);
+            adminInfo.setPassword("123456");
+            String newPwd = PasswordGenerateUtil.getPassword(adminInfo.getName(),adminInfo.getPassword(),salt,2);
+            adminInfo.setPassword(newPwd);
         } else {
-            adminInfo.setPassword(SecureUtil.md5(adminInfo.getPassword()));
+            String salt = Long.toString(System.currentTimeMillis());
+            adminInfo.setSalt(salt);
+            adminInfo.setPassword(adminInfo.getPassword());
+            String newPwd = PasswordGenerateUtil.getPassword(adminInfo.getName(),adminInfo.getPassword(),salt,2);
+            adminInfo.setPassword(newPwd);
         }
         adminInfoDao.insertSelective(adminInfo);
         return adminInfo;

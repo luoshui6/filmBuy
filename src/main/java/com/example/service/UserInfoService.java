@@ -1,6 +1,7 @@
 package com.example.service;
 
 import com.example.dao.UserInfoDao;
+import com.example.util.PasswordGenerateUtil;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 import com.example.entity.UserInfo;
@@ -30,9 +31,17 @@ public class UserInfoService {
         }
         if (StringUtils.isEmpty(userInfo.getPassword())) {
             // 默认密码123456
-            userInfo.setPassword(SecureUtil.md5("123456"));
+            String salt = Long.toString(System.currentTimeMillis());
+            userInfo.setSalt(salt);
+            userInfo.setPassword("123456");
+            String newPwd = PasswordGenerateUtil.getPassword(userInfo.getName(),userInfo.getPassword(),salt,2);
+            userInfo.setPassword(newPwd);
         } else {
-            userInfo.setPassword(SecureUtil.md5(userInfo.getPassword()));
+            String salt = Long.toString(System.currentTimeMillis());
+            userInfo.setSalt(salt);
+            userInfo.setPassword(userInfo.getPassword());
+            String newPwd = PasswordGenerateUtil.getPassword(userInfo.getName(),userInfo.getPassword(),salt,2);
+            userInfo.setPassword(newPwd);
         }
         userInfoDao.insertSelective(userInfo);
         return userInfo;

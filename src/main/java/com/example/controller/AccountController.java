@@ -15,6 +15,15 @@ import com.example.entity.UserInfo;
 import com.example.service.AdminInfoService;
 import com.example.service.UserInfoService;
 
+import com.example.util.PasswordGenerateUtil;
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authc.AuthenticationException;
+import org.apache.shiro.authc.IncorrectCredentialsException;
+import org.apache.shiro.authc.UnknownAccountException;
+import org.apache.shiro.authc.UsernamePasswordToken;
+import org.apache.shiro.session.Session;
+import org.apache.shiro.subject.Subject;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Value;
@@ -25,6 +34,8 @@ import cn.hutool.json.JSONUtil;
 
 import java.util.*;
 import java.util.stream.Collectors;
+
+import static com.example.common.ResultCode.USER_ACCOUNT_ERROR;
 
 @RestController
 public class AccountController {
@@ -39,21 +50,51 @@ public class AccountController {
 
 
     @PostMapping("/login")
-    public Result<Account> login(@RequestBody Account account, HttpServletRequest request) {
-        if (StrUtil.isBlank(account.getName()) || StrUtil.isBlank(account.getPassword()) || account.getLevel() == null) {
-            throw new CustomException(ResultCode.PARAM_LOST_ERROR);
+    public Result<Account> login(@RequestBody Account account, HttpServletRequest request, Model model) {
+//        if (StrUtil.isBlank(account.getName()) || StrUtil.isBlank(account.getPassword()) || account.getLevel() == null) {
+//            throw new CustomException(ResultCode.PARAM_LOST_ERROR);
+//        }
+//        Integer level = account.getLevel();
+//        Account login = new Account();
+//		if (1 == level) {
+//			login = adminInfoService.login(account.getName(), account.getPassword());
+//		}
+//		if (2 == level) {
+//			login = userInfoService.login(account.getName(), account.getPassword());
+//		}
+        //获取当前的用户
+        Subject currentUser = SecurityUtils.getSubject();
+        //判断用户是否在缓存中
+        Object loginUser = currentUser.getSession().getAttribute(account.getName());
+        if(loginUser != null){
+            return Result.success(account);
         }
-        Integer level = account.getLevel();
-        Account login = new Account();
-		if (1 == level) {
-			login = adminInfoService.login(account.getName(), account.getPassword());
-		}
-		if (2 == level) {
-			login = userInfoService.login(account.getName(), account.getPassword());
-		}
 
-        request.getSession().setAttribute("user", login);
-        return Result.success(login);
+        UsernamePasswordToken token = new UsernamePasswordToken(account.getName(), account.getPassword(),account.getLevel().toString());
+        try {
+            //主体提交登录请求到SecurityManager
+//            token.setRememberMe(rememberMe);
+            currentUser.login(token);
+        }catch (IncorrectCredentialsException ice){
+            model.addAttribute("msg","密码不正确");
+            return Result.error("2002","密码不正确");
+        }catch(UnknownAccountException uae){
+            model.addAttribute("msg","账号不存在");
+            return Result.error("2002","账号不存在");
+        }catch(AuthenticationException ae){
+            model.addAttribute("msg","状态不正常");
+            return Result.error("-1","状态不正常");
+        }
+        if(currentUser.isAuthenticated()){
+            System.out.println("认证成功");
+            return Result.success(account);
+        }else{
+            token.clear();
+            return Result.error();
+        }
+
+//        request.getSession().setAttribute("user", login);
+
     }
 
     @PostMapping("/register")
@@ -76,17 +117,29 @@ public class AccountController {
 
     @GetMapping("/logout")
     public Result logout(HttpServletRequest request) {
-        request.getSession().setAttribute("user", null);
+
+//        request.getSession().setAttribute("user", null);
+        Subject subject = SecurityUtils.getSubject();
+        if (subject != null) {
+            subject.logout();
+        }
         return Result.success();
     }
 
     @GetMapping("/auth")
     public Result getAuth(HttpServletRequest request) {
-        Object user = request.getSession().getAttribute("user");
-        if(user == null) {
+
+        //获取当前的用户
+        Subject currentUser = SecurityUtils.getSubject();
+        Account account = (Account) currentUser.getPrincipal();
+        if(account == null) {
             return Result.error("401", "未登录");
         }
-        return Result.success(user);
+        else {
+            Object loginUser = currentUser.getSession().getAttribute(account.getName());
+            return Result.success(loginUser);
+        }
+
     }
 
     @GetMapping("/getAccountInfo")
@@ -205,7 +258,11 @@ public class AccountController {
 			if (info == null) {
 				return Result.error(ResultCode.USER_NOT_EXIST_ERROR.code, ResultCode.USER_NOT_EXIST_ERROR.msg);
 			}
-			info.setPassword(SecureUtil.md5("123456"));
+            String salt = Long.toString(System.currentTimeMillis());
+            info.setSalt(salt);
+            info.setPassword("123456");
+            String newPwd = PasswordGenerateUtil.getPassword(info.getName(),info.getPassword(),salt,2);
+            info.setPassword(newPwd);
 			adminInfoService.update(info);
 		}
 		if (2 == level) {
@@ -213,7 +270,11 @@ public class AccountController {
 			if (info == null) {
 				return Result.error(ResultCode.USER_NOT_EXIST_ERROR.code, ResultCode.USER_NOT_EXIST_ERROR.msg);
 			}
-			info.setPassword(SecureUtil.md5("123456"));
+            String salt = Long.toString(System.currentTimeMillis());
+            info.setSalt(salt);
+            info.setPassword("123456");
+            String newPwd = PasswordGenerateUtil.getPassword(info.getName(),info.getPassword(),salt,2);
+            info.setPassword(newPwd);
 			userInfoService.update(info);
 		}
 

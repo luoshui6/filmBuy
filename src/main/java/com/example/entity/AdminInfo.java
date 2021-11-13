@@ -1,9 +1,10 @@
 package com.example.entity;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Table(name = "admin_info")
-public class AdminInfo extends Account {
+public class AdminInfo extends Account implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -34,6 +35,24 @@ public class AdminInfo extends Account {
 	private Integer level;
 	@Column(name = "account")
 	private Double account;
+	@Column(name = "salt")
+	private String salt;
+
+	/**
+	 * 获取MD5盐  这里用username+salt实现
+	 * @return
+	 */
+	public String getSalt() {
+		return name+salt;
+	}
+
+	public String getSalt2() {
+		return salt;
+	}
+
+	public void setSalt(String salt) {
+		this.salt = salt;
+	}
 
 	public String getName() {
 		return name;
