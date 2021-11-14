@@ -1,9 +1,13 @@
 package com.example.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Table(name = "advertiser_info")
-public class AdvertiserInfo  {
+@JsonIgnoreProperties(value = {"hibernateLazyInitializer", "handler"})
+public class AdvertiserInfo implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

@@ -69,6 +69,7 @@ public class UserRealm extends AuthorizingRealm {
             Subject subject = SecurityUtils.getSubject();
             Session session = subject.getSession();
             session.setAttribute(user.getName(), user);
+//            session.setAttribute("user", user);
 
             //密码认证 它自动做了  加密了
             return new SimpleAuthenticationInfo(user,user.getPassword(), ByteSource.Util.bytes(user.getSalt2()), getName());

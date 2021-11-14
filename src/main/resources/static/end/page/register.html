@@ -96,7 +96,8 @@
             axios.get("/getAuthority").then(res => {
                 if (res.data.code === '0') {
                     let list = res.data.data;
-                    this.authorities = list.filter(item => item.level !== 1);
+                    // this.authorities = list.filter(item => item.level !== 1);
+                    this.authorities = res.data.data;
                 } else {
                     alert(res.data.msg);
                 }

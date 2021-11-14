@@ -1,10 +1,14 @@
 package com.example.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.List;
 
+@JsonIgnoreProperties(value = {"hibernateLazyInitializer", "handler"})
 @Table(name = "goods_info")
-public class GoodsInfo {
+public class GoodsInfo implements Serializable {
     /**
      * 主键
      */

@@ -1,6 +1,12 @@
 package com.example.common;
 
-public class Result<T> {
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import org.springframework.context.annotation.Bean;
+
+import java.io.Serializable;
+
+@JsonIgnoreProperties(value = {"handler","hibernateLazyInitializer","fieldHandler"})
+public class Result<T> implements Serializable {
     private String code;
     private String msg;
     private T data;

@@ -1,9 +1,13 @@
 package com.example.entity;
 
-import javax.persistence.*;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import javax.persistence.*;
+import java.io.Serializable;
+
+@JsonIgnoreProperties(value = {"hibernateLazyInitializer", "handler"})
 @Table(name = "cart_info")
-public class CartInfo {
+public class CartInfo implements Serializable {
     /**
      * 自增id
      */

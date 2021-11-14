@@ -1,6 +1,11 @@
 package com.example.common;
 
-public enum ResultCode {
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import java.io.Serializable;
+
+@JsonIgnoreProperties(value = {"hibernateLazyInitializer", "handler"})
+public enum ResultCode implements Serializable {
     SUCCESS("0", "成功"),
     ERROR("-1", "系统异常"),
     PARAM_ERROR("1001", "参数异常"),

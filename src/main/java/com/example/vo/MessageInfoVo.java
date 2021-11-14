@@ -2,6 +2,7 @@ package com.example.vo;
 
 import com.example.entity.MessageInfo;
 
+
 import java.util.List;
 
 public class MessageInfoVo extends MessageInfo {

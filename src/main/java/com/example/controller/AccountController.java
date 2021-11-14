@@ -87,13 +87,12 @@ public class AccountController {
         }
         if(currentUser.isAuthenticated()){
             System.out.println("认证成功");
+//            request.getSession().setAttribute("user", account);
             return Result.success(account);
         }else{
             token.clear();
             return Result.error();
         }
-
-//        request.getSession().setAttribute("user", login);
 
     }
 
@@ -136,6 +135,7 @@ public class AccountController {
             return Result.error("401", "未登录");
         }
         else {
+//            System.out.println(account.getLevel());
             Object loginUser = currentUser.getSession().getAttribute(account.getName());
             return Result.success(loginUser);
         }
