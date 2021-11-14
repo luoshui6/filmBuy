@@ -3,8 +3,13 @@ package com.example.controller;
 import com.example.common.Result;
 import com.example.entity.GoodsInfo;
 import com.example.entity.Account;
+import com.example.entity.SeatInfo;
 import com.example.service.GoodsInfoService;
+import com.example.service.SeatInfoService;
+import com.example.util.RedisUtil;
 import com.github.pagehelper.PageInfo;
+import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -13,9 +18,15 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value = "/goodsInfo")
-public class GoodsInfoController {
+public class GoodsInfoController implements InitializingBean {
     @Resource
     private GoodsInfoService goodsInfoService;
+
+    @Autowired
+    RedisUtil redisUtil;
+
+    @Resource
+    private SeatInfoService seatInfoService;
 
     @PostMapping
     public Result<GoodsInfo> add(@RequestBody GoodsInfo goodsInfo, HttpServletRequest request) {
@@ -87,5 +98,23 @@ public class GoodsInfoController {
     @GetMapping("/searchGoods")
     public Result<List<GoodsInfo>> searchGoods(@RequestParam String text) {
         return Result.success(goodsInfoService.searchGoods(text));
+    }
+
+
+    /**
+     * 系统初始化的时候做的事情。
+     * 在容器启动时候，检测到了实现了接口InitializingBean之后，
+     */
+    @Override
+    public void afterPropertiesSet() throws Exception {
+        List<SeatInfo> seatslist = seatInfoService.findAllDetail();
+//        System.out.println(seatslist);
+        if(seatslist == null) {
+            return;
+        }
+        for(SeatInfo seats:seatslist) {
+            //如果不是null的时候，将库存加载到redis里面去
+            redisUtil.set(seats.getGoodsId().toString(), seats);
+        }
     }
 }

@@ -48,15 +48,13 @@ public class UserRealm extends AuthorizingRealm {
 
         UsernamePasswordToken userToken = (UsernamePasswordToken) authenticationToken;
         String level = userToken.getHost();
-
+//        System.out.println(level);
         if (level.equals("1")) {
             AdminInfo admin = adminInfoDao.findByUsername(userToken.getUsername());
             if (admin == null) {
                 return null;
             }
-            Subject subject = SecurityUtils.getSubject();
-            Session session = subject.getSession();
-            session.setAttribute(admin.getName(), admin);
+//            session.setAttribute("user", admin);
 
             //密码认证 它自动做了  加密了
             return new SimpleAuthenticationInfo(admin,admin.getPassword(), ByteSource.Util.bytes(admin.getSalt2()), getName());
@@ -64,13 +62,11 @@ public class UserRealm extends AuthorizingRealm {
         }else {
             UserInfo user = userInfoDao.findByUsername(userToken.getUsername());
             if (user == null) {
+//                System.out.println("cnmmmmmmmmm2");
                 return null;
             }
-            Subject subject = SecurityUtils.getSubject();
-            Session session = subject.getSession();
-            session.setAttribute(user.getName(), user);
 //            session.setAttribute("user", user);
-
+//            System.out.println("cnmmmmmmmmm");
             //密码认证 它自动做了  加密了
             return new SimpleAuthenticationInfo(user,user.getPassword(), ByteSource.Util.bytes(user.getSalt2()), getName());
         }

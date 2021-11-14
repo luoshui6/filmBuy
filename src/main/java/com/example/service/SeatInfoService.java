@@ -5,6 +5,7 @@ import com.example.entity.SeatInfo;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @Service
 public class SeatInfoService {
@@ -14,6 +15,10 @@ public class SeatInfoService {
 
     public SeatInfo findDetail(Long goodsId) {
         return seatInfoDao.findDetail(goodsId);
+    }
+
+    public List<SeatInfo> findAllDetail() {
+        return seatInfoDao.findAllDetail();
     }
 
     public void save(SeatInfo seatInfo) {

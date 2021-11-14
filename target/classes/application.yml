@@ -17,6 +17,7 @@ spring:
 
     #整合redis
   redis:
+#    host: 112.124.54.41
     host: 112.124.54.41
     port: 3377
     database: 1
@@ -42,3 +43,6 @@ authority:
 
 logging:
   file: log/my.log
+
+
+

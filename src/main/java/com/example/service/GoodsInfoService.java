@@ -10,6 +10,8 @@ import com.example.entity.TypeInfo;
 import com.example.entity.Account;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.subject.Subject;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -70,7 +72,10 @@ public class GoodsInfoService {
 
     public PageInfo<GoodsInfo> findPage(Integer pageNum, Integer pageSize, String name, HttpServletRequest request) {
         PageHelper.startPage(pageNum, pageSize);
-        Account user = (Account) request.getSession().getAttribute("user");
+//        Account user = (Account) request.getSession().getAttribute("user");
+        //获取当前的用户
+        Subject currentUser = SecurityUtils.getSubject();
+        Account user = (Account) currentUser.getPrincipal();
         List<GoodsInfo> all;
         if (user.getLevel() == 1) {
             all = goodsInfoDao.findByNameAndUserId(name, null, null);

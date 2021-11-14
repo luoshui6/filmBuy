@@ -65,9 +65,9 @@ public class AccountController {
         //获取当前的用户
         Subject currentUser = SecurityUtils.getSubject();
         //判断用户是否在缓存中
-        Object loginUser = currentUser.getSession().getAttribute(account.getName());
+        Account loginUser = (Account) currentUser.getSession().getAttribute(account.getName());
         if(loginUser != null){
-            return Result.success(account);
+            return Result.success(loginUser);
         }
 
         UsernamePasswordToken token = new UsernamePasswordToken(account.getName(), account.getPassword(),account.getLevel().toString());
@@ -88,6 +88,9 @@ public class AccountController {
         if(currentUser.isAuthenticated()){
             System.out.println("认证成功");
 //            request.getSession().setAttribute("user", account);
+            Subject subject = SecurityUtils.getSubject();
+            Session session = subject.getSession();
+            session.setAttribute(account.getName(), account);
             return Result.success(account);
         }else{
             token.clear();
@@ -131,12 +134,13 @@ public class AccountController {
         //获取当前的用户
         Subject currentUser = SecurityUtils.getSubject();
         Account account = (Account) currentUser.getPrincipal();
+//        System.out.println(account);
+
         if(account == null) {
             return Result.error("401", "未登录");
         }
         else {
-//            System.out.println(account.getLevel());
-            Object loginUser = currentUser.getSession().getAttribute(account.getName());
+            Account loginUser = (Account) currentUser.getSession().getAttribute(account.getName());
             return Result.success(loginUser);
         }
 
@@ -183,7 +187,10 @@ public class AccountController {
     */
     @GetMapping("/authority")
     public Result<List<Integer>> getAuthorityInfo(HttpServletRequest request) {
-        Account user = (Account) request.getSession().getAttribute("user");
+        //获取当前的用户
+        Subject currentUser = SecurityUtils.getSubject();
+        Account user = (Account) currentUser.getPrincipal();
+//        Account user = (Account) request.getSession().getAttribute("user");
         if (user == null) {
             return Result.success(new ArrayList<>());
         }
@@ -205,7 +212,10 @@ public class AccountController {
     @GetMapping("/permission/{modelId}")
     public Result<List<Integer>> getPermission(@PathVariable Integer modelId, HttpServletRequest request) {
         List<AuthorityInfo> authorityInfoList = JSONUtil.toList(JSONUtil.parseArray(authorityStr), AuthorityInfo.class);
-        Account user = (Account) request.getSession().getAttribute("user");
+//        Account user = (Account) request.getSession().getAttribute("user");
+        //获取当前的用户
+        Subject currentUser = SecurityUtils.getSubject();
+        Account user = (Account) currentUser.getPrincipal();
         if (user == null) {
             return Result.success(new ArrayList<>());
         }
@@ -222,7 +232,10 @@ public class AccountController {
 
     @PutMapping("/updatePassword")
     public Result updatePassword(@RequestBody Account info, HttpServletRequest request) {
-        Account account = (Account) request.getSession().getAttribute("user");
+//        Account account = (Account) request.getSession().getAttribute("user");
+        //获取当前的用户
+        Subject currentUser = SecurityUtils.getSubject();
+        Account account = (Account) currentUser.getPrincipal();
         if (account == null) {
             return Result.error(ResultCode.USER_NOT_EXIST_ERROR.code, ResultCode.USER_NOT_EXIST_ERROR.msg);
         }

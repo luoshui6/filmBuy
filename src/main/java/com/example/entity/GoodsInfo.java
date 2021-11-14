@@ -95,6 +95,41 @@ public class GoodsInfo implements Serializable {
     private Integer num;
 
     /**
+     * 商品秒杀价格
+     */
+    private Double price_seckill;
+
+    @Column(name = "startTime")
+    private String startTime;
+
+    @Column(name = "endTime")
+    private String endTime;
+
+    public Double getPrice_seckill() {
+        return price_seckill;
+    }
+
+    public void setPrice_seckill(Double price_seckill) {
+        this.price_seckill = price_seckill;
+    }
+
+    public String getStartTime() {
+        return startTime;
+    }
+
+    public void setStartTime(String startTime) {
+        this.startTime = startTime;
+    }
+
+    public String getEndTime() {
+        return endTime;
+    }
+
+    public void setEndTime(String endTime) {
+        this.endTime = endTime;
+    }
+
+    /**
      * 获取主键
      *
      * @return id - 主键

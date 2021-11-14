@@ -1,5 +1,8 @@
 package com.example.common.config;
 
+import com.alibaba.fastjson.serializer.SerializerFeature;
+import com.alibaba.fastjson.support.config.FastJsonConfig;
+import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import org.springframework.context.annotation.Configuration;
@@ -36,19 +39,29 @@ public class WebMvcConfig implements WebMvcConfigurer {
                 .allowCredentials(true);
     }
 
+//    @Override
+//    public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
+//        converters.add(mappingJackson2HttpMessageConverter());
+//    }
+//
+//    // 解决序列化空对象问题
+//    private MappingJackson2HttpMessageConverter mappingJackson2HttpMessageConverter() {
+//        ObjectMapper mapper = new ObjectMapper();
+//        // 关键代码
+//        mapper.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
+//        MappingJackson2HttpMessageConverter converter =
+//                new MappingJackson2HttpMessageConverter(mapper);
+//        return converter;
+//    }
+
     @Override
-    public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
-        converters.add(mappingJackson2HttpMessageConverter());
+    public void extendMessageConverters(List<HttpMessageConverter<?>> converters) {
+        FastJsonHttpMessageConverter fjc = new FastJsonHttpMessageConverter();
+        FastJsonConfig fj = new FastJsonConfig();
+        fj.setSerializerFeatures(SerializerFeature.DisableCircularReferenceDetect);
+        fjc.setFastJsonConfig(fj);
+        converters.add(fjc);
     }
 
-    // 解决序列化空对象问题
-    private MappingJackson2HttpMessageConverter mappingJackson2HttpMessageConverter() {
-        ObjectMapper mapper = new ObjectMapper();
-        // 关键代码
-        mapper.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
-        MappingJackson2HttpMessageConverter converter =
-                new MappingJackson2HttpMessageConverter(mapper);
-        return converter;
-    }
 
 }
