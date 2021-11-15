@@ -271,7 +271,14 @@
 
             this.loadTable(1);
 
-            this.user = JSON.parse(localStorage.getItem('user'));
+            // this.user = JSON.parse(localStorage.getItem('user'));
+            axios.get('/auth').then(res => {
+                if (res.data.code === '0') {
+                    this.user = res.data.data;
+                }else {
+                    alert(res.data.msg);
+                }
+            });
 
             axios.get("/permission/4").then(res => {
                 if (res.data.code === '0') {

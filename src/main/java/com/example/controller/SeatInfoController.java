@@ -2,7 +2,10 @@ package com.example.controller;
 
 import com.example.common.Result;
 import com.example.common.ResultCode;
+import com.example.common.config.rabbitmq.MQSender;
+import com.example.common.config.rabbitmq.MiaoshaMessage;
 import com.example.entity.Account;
+import com.example.entity.OrderInfo;
 import com.example.entity.SeatInfo;
 import com.example.service.SeatInfoService;
 import com.example.util.RedisUtil;
@@ -23,6 +26,10 @@ public class SeatInfoController {
     @Autowired
     RedisUtil redisUtil;
 
+    @Autowired
+    MQSender mQSender;
+
+
     @PostMapping()
     public Result add(@RequestBody SeatInfo seatInfo) {
         seatInfoService.save(seatInfo);
@@ -42,24 +49,40 @@ public class SeatInfoController {
         boolean lock = redisUtil.getLock(LOCK_ID, 10 * 1000);
         if (lock) {
              if (redisUtil.hasKey(seat)) {
-                 return Result.error("该座位已被抢占,下单失败");
+                 return Result.error("该座位已被抢占,下单失败！");
              }else {
-                 redisUtil.set(seat, 1);
+                 redisUtil.set(seat, user.getName());
+                 MiaoshaMessage miaoshaMessage = new MiaoshaMessage();
+                 miaoshaMessage.setUserId(id);
+                 miaoshaMessage.setLevel(user.getLevel());
+                 miaoshaMessage.setTotal(1);
+                 miaoshaMessage.setGoodsId(seatInfo.getGoodsId());
+                 miaoshaMessage.setPosition(seatInfo.getPosition());
 
+                 System.out.println(seatInfo.getPosition());
 
+                 mQSender.sendMiaoshaMessage(miaoshaMessage);
                  redisUtil.releaseLock(LOCK_ID);
-                 return Result.success("抢到座位了");
+                 return Result.success("下单成功！");
              }
         }else {
-            return Result.error("该座位已被抢占,下单失败");
+            return Result.error("该座位已被抢占,下单失败!");
         }
     }
 
     @GetMapping("/detail")
     public Result<SeatInfo> findByUserId(@RequestParam Long goodsId) {
-        SeatInfo seatInfo = (SeatInfo)redisUtil.get(goodsId.toString());
-        return Result.success(seatInfo);
-//        return Result.success(seatInfoService.findDetail(goodsId));
+        return Result.success(seatInfoService.findDetail(goodsId));
     }
 
+    @GetMapping("/detail_seckill")
+    public Result<SeatInfo> findByUserId2(@RequestParam Long goodsId) {
+        if (redisUtil.hasKey(goodsId.toString())){
+            SeatInfo seatInfo = (SeatInfo)redisUtil.get(goodsId.toString());
+            return Result.success(seatInfo);
+        }else {
+            return Result.success(seatInfoService.findDetail(goodsId));
+        }
+
+    }
 }

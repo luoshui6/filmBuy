@@ -170,8 +170,9 @@ public class OrderInfoService {
         // 更新订单信息
         orderInfoDao.updateByPrimaryKeySelective(orderInfo);
 
-        // 下单 清空购物车
-        cartInfoService.empty(userId, level);
+        // 下单 清空购物车  ????
+//        cartInfoService.empty(userId, level);
+
         return orderInfo;
     }
 
@@ -213,7 +214,7 @@ public class OrderInfoService {
         }
 
         // 下单 清空购物车
-        cartInfoService.empty(userId, level);
+//        cartInfoService.empty(userId, level);
     }
 
     @Transactional

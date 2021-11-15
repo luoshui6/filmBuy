@@ -74,6 +74,17 @@ public class OrderInfo implements Serializable {
     @Transient
     private Integer total;
 
+    private String position;
+
+    public String getPosition() {
+        return position;
+    }
+
+    public void setPosition(String position) {
+        this.position = position;
+    }
+
+
     /**
      * 获取主键id
      *

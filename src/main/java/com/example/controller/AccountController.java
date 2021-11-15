@@ -197,11 +197,12 @@ public class AccountController {
     public Result<List<Integer>> getAuthorityInfo(HttpServletRequest request) {
         //获取当前的用户
         Subject currentUser = SecurityUtils.getSubject();
-        Account user = (Account) currentUser.getPrincipal();
-//        Account user = (Account) request.getSession().getAttribute("user");
+        Account user1 = (Account) currentUser.getPrincipal();
+        Account user = (Account) request.getSession().getAttribute(user1.getName());
         if (user == null) {
             return Result.success(new ArrayList<>());
         }
+        System.out.println(user.getLevel()+"authority");
         JSONArray objects = JSONUtil.parseArray(authorityStr);
         for (Object object : objects) {
             JSONObject jsonObject = (JSONObject) object;

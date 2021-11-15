@@ -88,6 +88,7 @@
                 <tr style="background-color: #cccccc">
                     <th>商品</th>
                     <th>订单编号</th>
+                    <th>座位号</th>
                     <th>金额</th>
                     <th>送货地址</th>
                     <th>收货人</th>
@@ -99,20 +100,21 @@
                 </thead>
                 <tbody>
                 <tr v-for="(item,index) in orderData" :key="item.id">
-                    <td style="width:230px;">
+                    <td style="width:200px;">
                         <div v-for="g in item.goodsList" style="margin-bottom: 5px; display: flex;align-items: center">
                             <img style="width: 50%; height: 50%" :src=g.imgSrc>
                             <span style="font-size: 12px; margin-left: 10px">{{g.name}} X {{g.count}}</span>
                         </div>
                     </td>
 					<td>{{item.orderId}}</td>
+                    <td>{{item.position}}</td>
 					<td>{{item.totalPrice}}</td>
                     <td>{{item.linkAddress}}</td>
                     <td>{{item.linkMan}}</td>
                     <td>{{item.linkPhone}}</td>
                     <td>{{item.createTime}}</td>
                     <td>{{item.status}}</td>
-                    <td>
+                    <td style="width:180px;">
                         <button v-if="item.status === '待付款' || item.status === '完成'" class="btn btn-danger btn-xs" @click="del(item)">删除</button>
                         <button v-if="item.status === '待付款'" class="btn btn-warning btn-xs" @click="changeStatus(item.id, '已取消')">取消</button>
                         <button v-if="item.status === '待付款'" class="btn btn-primary btn-xs" @click="changeStatus(item.id, '待观看')">付款</button>

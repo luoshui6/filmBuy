@@ -349,7 +349,14 @@
             const bodyHeight = document.getElementsByTagName("body")[0].clientHeight;
             document.getElementById("nav-id").style.height = (menuHeight > bodyHeight ? menuHeight : bodyHeight) + 'px';
 
-            this.user = JSON.parse(localStorage.getItem("user"));
+            // this.user = JSON.parse(localStorage.getItem("user"));
+            axios.get('/auth').then(res => {
+                if (res.data.code === '0') {
+                    this.user = res.data.data;
+                }else {
+                    alert(res.data.msg);
+                }
+            });
             axios.get("/authority").then(res => {
                 if (res.data.code === '0') {
                     this.authority = res.data.data;
