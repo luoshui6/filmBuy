@@ -492,34 +492,39 @@
                     alert('请先选座');
                     return;
                 }
+                if (tempArr.length > 1) {
+                    alert('每次只能选一个座位');
+                    return;
+                }
                 let data = {id: seatId, goodsId: goodsId, position: JSON.stringify(tempArr)};
                 let _this = this;
                 $.ajax({
-                    url: '/seatInfo_seckill',
+                    url: '/seatInfo/seckill',
                     type: 'post',
                     contentType: 'application/json',
                     data: JSON.stringify(data),
                     success: function (res) {
                         if(res.code === '0') {
-                            let data = JSON.stringify({userId: _this.user.id, level: _this.user.level, total: tempArr.length, goodsId: goodsId, position: JSON.stringify(tempArr)});
-                            $.ajax({
-                                url: '/orderInfo',
-                                type: 'POST',
-                                data: data,
-                                contentType: 'application/json',
-                                success: function (res) {
-                                    if(res.code === '0') {
-                                        alert('购票成功');
-                                        setTimeout(function () {
-                                            location.href = '/front/orderInfo.html';
-                                        }, 1000)
-                                    } else {
-                                        alert(res.msg);
-                                    }
-                                }
-                            })
+                            // let data = JSON.stringify({userId: _this.user.id, level: _this.user.level, total: tempArr.length, goodsId: goodsId, position: JSON.stringify(tempArr)});
+                            // $.ajax({
+                            //     url: '/orderInfo',
+                            //     type: 'POST',
+                            //     data: data,
+                            //     contentType: 'application/json',
+                            //     success: function (res) {
+                            //         if(res.code === '0') {
+                            //             alert('购票成功');
+                            //             setTimeout(function () {
+                            //                 location.href = '/front/orderInfo.html';
+                            //             }, 1000)
+                            //         } else {
+                            //             alert(res.msg);
+                            //         }
+                            //     }
+                            // })
+                            console.log("success"+res.data);
                         } else {
-                            alert(res.data.msg)
+                            alert(res.data.)
                         }
                     }
                 });

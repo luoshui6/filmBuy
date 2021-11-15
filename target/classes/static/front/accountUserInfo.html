@@ -260,7 +260,11 @@
                 })
             },
             recharge() {
+                if(this.entity.account === null) {
+                    this.entity.account = 0;
+                }
                 let data = {id: this.entity.id, account: parseFloat(this.entity.account) + parseFloat(this.account)};
+                // console.log(data,parseFloat(this.account),this.entity.account);
                 axios.put("/userInfo", data).then(res => {
                     if (res.data.code === '0') {
                         alert('充值成功');

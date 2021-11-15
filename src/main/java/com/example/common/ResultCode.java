@@ -13,6 +13,7 @@ public enum ResultCode implements Serializable {
     USER_ACCOUNT_ERROR("2002", "账号或密码错误"),
     USER_NOT_EXIST_ERROR("2003", "未找到用户"),
     ORDER_PAY_ERROR("3001", "库存不足，下单失败"),
+    SEAT_PAY_ERROR("3002", "该座位已被抢占,下单失败"),
     PARAM_LOST_ERROR("2004", "参数缺失"),
     PARAM_PASSWORD_ERROR("2005", "原密码输入错误"),
     ;

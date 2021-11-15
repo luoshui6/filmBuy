@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
+import org.springframework.util.StringUtils;
 
 import java.util.List;
 import java.util.Map;
@@ -17,7 +18,7 @@ import java.util.concurrent.TimeUnit;
 public class RedisUtil {
 
     @Autowired
-    private RedisTemplate<String, Object> redisTemplate;
+    private  RedisTemplate<String, Object> redisTemplate;
 
     //=============================common============================
 
@@ -472,7 +473,7 @@ public class RedisUtil {
      * 将list放入缓存
      * @param key 键
      * @param value 值
-     * @param time 时间(秒)
+//     * @param time 时间(秒)
      * @return
      */
     public boolean lSet(String key, Object value) {
@@ -507,7 +508,7 @@ public class RedisUtil {
      * 将list放入缓存
      * @param key 键
      * @param value 值
-     * @param time 时间(秒)
+//     * @param time 时间(秒)
      * @return
      */
     public boolean lSet(String key, List<Object> value) {
@@ -570,6 +571,76 @@ public class RedisUtil {
             e.printStackTrace();
             return 0;
         }
+    }
+
+    private static long lockTimeout = 5*1000L; //锁定时间30s
+    /**
+     * 加锁
+     *
+     * @param key
+//     * @param value 当前时间+ 超时时间
+     * @return
+     */
+//    public static boolean lock(String key, long currvalue) {
+//        String value = currvalue+lockTimeout+"";
+//        //未加锁，则加锁
+//        if (redisTemplate.opsForValue().setIfAbsent(key, value)) {
+//            return true;
+//        }
+//
+//        do {
+//            //获取锁解锁时间
+//            String currentValue = (String)redisTemplate.opsForValue().get(key);
+//            //如果锁过期
+//            if (!StringUtils.isEmpty(currentValue) && Long.parseLong(currentValue) < System.currentTimeMillis()) {
+//                //获得上一个锁的时间
+//                String olcValue = (String)redisTemplate.opsForValue().getAndSet(key, value);
+//                if (!StringUtils.isEmpty(olcValue) && olcValue.equals(currentValue)) {
+//                    return true;
+//                }
+//            }
+//            try {
+////                log.info("等待500 ms key:{},value:{}，cur:{}, 剩余:{}",key,value, System.currentTimeMillis(), Long.parseLong(value)-System.currentTimeMillis());
+//                Thread.sleep(500);
+//            } catch (InterruptedException e) {
+//            }
+//        }while(Long.parseLong(value) > System.currentTimeMillis());
+//
+//        return false;
+//    }
+//
+//    /**
+//     * 解锁
+//     *
+//     * @param key
+////     * @param value
+//     */
+//    public static void unlock(String key, long currvalue) {
+//        try {
+//            String value = currvalue+lockTimeout+"";
+//            String currentVlue = (String)redisTemplate.opsForValue().get(key);
+//            if (!StringUtils.isEmpty(currentVlue) && currentVlue.equals(value)) {
+//                redisTemplate.opsForValue().getOperations().delete(key);
+//            }
+//        } catch (Exception e) {
+//            System.out.println("【redis分布式锁】 解锁异常" + e.getMessage());;
+//        }
+//    }
+
+    /**
+     * 获得锁
+     */
+    public boolean getLock(String lockId, long millisecond) {
+        Boolean success = redisTemplate.opsForValue().setIfAbsent(lockId, "lock",
+                millisecond, TimeUnit.MILLISECONDS);
+        return success != null && success;
+    }
+
+    /**
+     * 释放锁
+     */
+    public void releaseLock(String lockId) {
+        redisTemplate.delete(lockId);
     }
 
 }

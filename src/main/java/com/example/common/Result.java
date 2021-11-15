@@ -39,6 +39,15 @@ public class Result<T> implements Serializable {
         return tResult;
     }
 
+    public static <T> Result<T> error(T data) {
+        Result tResult = new Result<>(data);
+        tResult.setCode(ResultCode.ERROR.code);
+        tResult.setMsg(ResultCode.ERROR.msg);
+        return tResult;
+    }
+
+
+
     public static Result error(String code, String msg) {
         Result tResult = new Result<>();
         tResult.setCode(code);

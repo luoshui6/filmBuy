@@ -88,10 +88,18 @@ public class AccountController {
         if(currentUser.isAuthenticated()){
             System.out.println("认证成功");
 //            request.getSession().setAttribute("user", account);
+            Integer level = account.getLevel();
+            Account login = new Account();
+            if (1 == level) {
+                login = adminInfoService.findByUserName(account.getName());
+            }
+            if (2 == level) {
+                login = userInfoService.findByUserName(account.getName());
+            }
             Subject subject = SecurityUtils.getSubject();
             Session session = subject.getSession();
-            session.setAttribute(account.getName(), account);
-            return Result.success(account);
+            session.setAttribute(account.getName(), login);
+            return Result.success(login);
         }else{
             token.clear();
             return Result.error();
