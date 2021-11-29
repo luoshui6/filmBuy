@@ -156,7 +156,9 @@ public class AccountController {
 
     @GetMapping("/getAccountInfo")
     public Result<Object> getAccountInfo(HttpServletRequest request) {
-        Account account = (Account) request.getSession().getAttribute("user");
+        Subject currentUser = SecurityUtils.getSubject();
+        Account account = (Account) currentUser.getPrincipal();
+        System.out.println(account.getId());
         if (account == null) {
             return Result.success(new Object());
         }

@@ -226,7 +226,14 @@
 
             },
             changeStatus(id, status) {
-                axios.post('/orderInfo/status/' + id + '/' + status).then(res => {
+                replaces=''
+                if(status == '待观看')
+                    replaces='dgk'
+                if(status == '已退款')
+                    replaces='ytk'
+                if(status == '已退货')
+                    replaces='yth'
+                axios.post('/orderInfo/status/' + id + '/' + replaces).then(res => {
                     if (res.data.code === '0') {
                         this.loadOrderInfo(1);
                     } else {

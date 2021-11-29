@@ -113,6 +113,7 @@ public class OrderInfoController {
      */
     @PostMapping("/status/{id}/{status}")
     public Result status(@PathVariable Long id, @PathVariable String status) {
+        System.out.println(id);
         orderInfoService.changeStatus(id, status);
         return Result.success();
     }

@@ -145,12 +145,13 @@
                             <span class="right-title">{{goodsInfo.name}}</span>
                             <i class="fa fa-thumbs-o-up praise" @click="hotClick()"><span style="margin-left: 3px; font-size: 12px">{{goodsInfo.hot}}</span></i>
                         </li>
-                        <li>描述：<span style="color: red; margin-left: 20px;">{{goodsInfo.description}}</span></li>
-                        <li>主演：<span style="color: red; margin-left: 20px;">{{goodsInfo.actor}}</span></li>
-                        <li>秒杀价：<span style="color: red; margin-left: 20px;">￥ {{goodsInfo.price_seckill}}</span></li>
+                        <li>描述：<span style="color: black; margin-left: 20px;">{{goodsInfo.description}}</span></li>
+                        <li>主演：<span style="color: black; margin-left: 20px;">{{goodsInfo.actor}}</span></li>
+                        <li>原价：<span style="color: black; margin-left: 20px;text-decoration:line-through;">￥ {{goodsInfo.price}}</span></li>
+                        <li>秒杀价：<span style="color: red; margin-left: 20px;font-size:30px;">￥ {{goodsInfo.price_seckill}}</span></li>
                         <li>秒杀开始时间：<span style="color: red; margin-left: 20px;">{{goodsInfo.startTime}}</span></li>
-                        <li>上映时间：<span style="color: red; margin-left: 20px;">{{goodsInfo.beginTime}}</span></li>
-                        <li>放映时长：<span style="color: red; margin-left: 20px;">{{goodsInfo.time}} 分钟</span></li>
+                        <li>上映时间：<span style="color: black; margin-left: 20px;">{{goodsInfo.beginTime}}</span></li>
+                        <li>放映时长：<span style="color: black; margin-left: 20px;">{{goodsInfo.time}} 分钟</span></li>
                         <li>
                             <button class="btn btn-info"  v-if="isBegin === 0">秒杀未开始</button>
                             <button class="btn btn-warning" @click="buySeat()" v-if="isBegin === 1">秒杀中</button>

@@ -232,6 +232,12 @@ public class OrderInfoService {
     }
 
     public void changeStatus(Long id, String status) {
+        if(status.equals("dgk"))
+            status="待观看";
+        if(status.equals("ytk"))
+            status="已退款";
+        if(status.equals("yth"))
+            status="已退货";
         OrderInfo order = orderInfoDao.findById(id);
         Long userId = order.getUserId();
         Integer level = order.getLevel();

@@ -10,7 +10,6 @@ com\example\entity\AdminInfo.class
 com\example\controller\TypeInfoController.class
 com\example\controller\NxSystemFileController.class
 com\example\dao\LinkInfoDao.class
-com\example\common\config\MyInterceptorConfig.class
 com\example\entity\AuthorityInfo.class
 com\example\vo\AdminInfoVo.class
 com\example\common\config\MyInterceptor.class

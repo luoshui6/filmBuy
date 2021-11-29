@@ -8,6 +8,8 @@ import com.example.service.GoodsInfoService;
 import com.example.service.SeatInfoService;
 import com.example.util.RedisUtil;
 import com.github.pagehelper.PageInfo;
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -30,7 +32,10 @@ public class GoodsInfoController implements InitializingBean {
 
     @PostMapping
     public Result<GoodsInfo> add(@RequestBody GoodsInfo goodsInfo, HttpServletRequest request) {
-        Account user = (Account) request.getSession().getAttribute("user");
+        Subject currentUser = SecurityUtils.getSubject();
+        Account user = (Account) currentUser.getPrincipal();
+        System.out.println(user.getId());
+        System.out.println(goodsInfo.getActor());
         goodsInfo.setUserId(user.getId());
         goodsInfo.setLevel(user.getLevel());
         goodsInfoService.add(goodsInfo);

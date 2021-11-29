@@ -5,6 +5,8 @@ import cn.hutool.json.JSONObject;
 import com.example.common.Result;
 import com.example.entity.Account;
 import com.example.service.*;
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.subject.Subject;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -28,7 +30,8 @@ public class MenuController {
 
     @GetMapping(value = "/getMenu", produces="application/json;charset=UTF-8")
     public String getMenu(HttpServletRequest request) {
-        Account account = (Account) request.getSession().getAttribute("user");
+		Subject currentUser = SecurityUtils.getSubject();
+		Account account = (Account) currentUser.getPrincipal();
         Integer level;
         if (account == null) {
             level = 1;

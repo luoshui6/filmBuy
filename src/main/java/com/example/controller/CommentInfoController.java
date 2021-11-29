@@ -6,6 +6,8 @@ import com.example.entity.Account;
 import com.example.service.CommentInfoService;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.subject.Subject;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -20,7 +22,8 @@ public class CommentInfoController {
 
     @PostMapping
     public Result<CommentInfo> add(@RequestBody CommentInfo commentInfo, HttpServletRequest request) {
-        Account user = (Account) request.getSession().getAttribute("user");
+        Subject currentUser = SecurityUtils.getSubject();
+        Account user = (Account) currentUser.getPrincipal();
         commentInfo.setUserId(user.getId());
         commentInfoService.add(commentInfo);
         return Result.success(commentInfo);
