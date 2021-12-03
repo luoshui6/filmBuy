@@ -220,15 +220,16 @@
             nextActive: true,
             entity: {}
         },
-        created: function () {
+        created: async function () {
             const menuHeight = document.getElementById("main-menu").getElementsByTagName('li').length * 53;
             const bodyHeight = document.getElementsByTagName("body")[0].clientHeight;
             document.getElementById("nav-id").style.height = (menuHeight > bodyHeight ? menuHeight : bodyHeight) + 'px';
 
             // this.user = JSON.parse(localStorage.getItem('user'));
-            axios.get('/auth').then(res => {
+            await axios.get('/auth').then(res => {
                 if (res.data.code === '0') {
                     this.user = res.data.data;
+                    console.log(this.user.id)
                 }else {
                     alert(res.data.msg);
                 }
@@ -236,6 +237,7 @@
             axios.get("/authority").then(res => {
                 if (res.data.code === '0') {
                     this.authority = res.data.data;
+                    // console.log(this.authority)
                 } else {
                     msg('error', res.data.msg);
                 }
@@ -244,6 +246,7 @@
         },
         methods: {
             loadTable(pageNum) {
+                console.log(this.user.id)
                 axios.get("/orderInfo/page?userId=" + this.user.id + "&pageNum=" + pageNum).then(res => {
                     if (res.data.code === '0') {
                         this.objs = res.data.data.list;
@@ -251,6 +254,7 @@
                         this.preActive = !(this.pageInfo.hasPreviousPage);
                         this.nextActive = !(this.pageInfo.hasNextPage);
                     } else {
+                        // console.log('error');
                         msg('error', res.data.msg);
                     }
                 });

@@ -3,6 +3,7 @@ package com.example.service;
 import cn.hutool.core.collection.CollUtil;
 import cn.hutool.core.date.DateUtil;
 import cn.hutool.core.util.RandomUtil;
+import com.example.common.Result;
 import com.example.common.ResultCode;
 import com.example.dao.OrderGoodsRelDao;
 import com.example.dao.OrderInfoDao;
@@ -11,6 +12,8 @@ import com.example.exception.CustomException;
 import com.example.util.SnowflakeIdWorker;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.subject.Subject;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -78,8 +81,14 @@ public class OrderInfoService {
      * 分页查询订单信息
      */
     public PageInfo<OrderInfo> findPages(Long userId, Integer pageNum, Integer pageSize, HttpServletRequest request) {
-        Account user = (Account) request.getSession().getAttribute("user");
-        if (user == null) {
+//        Account user = (Account) request.getSession().getAttribute("user");
+//        if (user == null) {
+//            throw new CustomException("1001", "session已失效，请重新登录");
+//        }
+        //获取当前的用户
+        Subject currentUser = SecurityUtils.getSubject();
+        Account user = (Account) currentUser.getPrincipal();
+        if(user == null) {
             throw new CustomException("1001", "session已失效，请重新登录");
         }
         Integer level = user.getLevel();

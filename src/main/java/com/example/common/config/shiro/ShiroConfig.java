@@ -130,8 +130,9 @@ public class ShiroConfig {
      */
     public RedisManager redisManager() {
         RedisManager redisManager = new RedisManager();
-        redisManager.setHost("112.124.54.41");
-        redisManager.setPort(3377);
+//        redisManager.setHost("10.0.100.4");
+        redisManager.setHost("106.55.173.219");
+        redisManager.setPort(13377);
 
 
         // 配置过期时间

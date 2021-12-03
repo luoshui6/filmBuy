@@ -175,13 +175,25 @@ public class AccountController {
 
     @GetMapping("/getSession")
     public Result<Map<String, String>> getSession(HttpServletRequest request) {
-        Account account = (Account) request.getSession().getAttribute("user");
-        if (account == null) {
-            return Result.success(new HashMap<>(1));
+//        Account account = (Account) request.getSession().getAttribute("user");
+//        if (account == null) {
+//            return Result.success(new HashMap<>(1));
+//        }
+//        Map<String, String> map = new HashMap<>(1);
+//        map.put("username", account.getName());
+//        return Result.success(map);
+        //获取当前的用户
+        Subject currentUser = SecurityUtils.getSubject();
+        Account account = (Account) currentUser.getPrincipal();
+        if(account == null) {
+            return Result.error("401", "未登录");
         }
-        Map<String, String> map = new HashMap<>(1);
-        map.put("username", account.getName());
-        return Result.success(map);
+        else {
+            Account loginUser = (Account) currentUser.getSession().getAttribute(account.getName());
+            Map<String, String> map = new HashMap<>(1);
+            map.put("username", loginUser.getName());
+            return Result.success(map);
+        }
     }
 
     @GetMapping("/getAuthority")

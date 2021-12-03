@@ -1,12 +1,14 @@
 package com.example.controller;
 
 import cn.hutool.core.io.FileUtil;
+import cn.hutool.core.io.resource.ClassPathResource;
 import com.example.common.Result;
 import com.example.entity.NxSystemFileInfo;
 import com.example.exception.CustomException;
 import com.example.service.NxSystemFileInfoService;
 import com.github.pagehelper.PageInfo;
 import net.coobird.thumbnailator.Thumbnails;
+import org.springframework.util.ResourceUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
@@ -14,10 +16,7 @@ import org.springframework.web.multipart.MultipartHttpServletRequest;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.IOException;
-import java.io.OutputStream;
+import java.io.*;
 import java.net.URLEncoder;
 import java.util.HashMap;
 import java.util.Map;
@@ -27,7 +26,7 @@ import java.util.Map;
 public class NxSystemFileController {
 
     private static final String BASE_PATH = System.getProperty("user.dir") + "/src/main/resources/static/file/";
-
+//      private static final String BASE_PATH = ResourceUtils.CLASSPATH_URL_PREFIX + "/static/file/";
     @Resource
     private NxSystemFileInfoService nxSystemFileInfoService;
 
@@ -96,6 +95,9 @@ public class NxSystemFileController {
         if (nxSystemFileInfo == null) {
             throw new CustomException("1001", "未查询到该文件");
         }
+//        InputStream input = new ClassPathResource(path).getInputStream()
+//        System.out.println(BASE_PATH);
+
         byte[] bytes = FileUtil.readBytes(BASE_PATH + nxSystemFileInfo.getFileName());
         response.reset();
         // 设置response的Header

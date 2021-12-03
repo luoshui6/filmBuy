@@ -8,6 +8,8 @@ import com.example.entity.CommentInfo;
 import com.example.exception.CustomException;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.subject.Subject;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -75,9 +77,15 @@ public class CommentInfoService {
     }
 
     public PageInfo<CommentInfo> findPage(Integer pageNum, Integer pageSize, String name, HttpServletRequest request) {
-        Account account = (Account) request.getSession().getAttribute("user");
-        if (account == null) {
-            throw new CustomException("1001", "请先登录");
+//        Account account = (Account) request.getSession().getAttribute("user");
+//        if (account == null) {
+//            throw new CustomException("1001", "请先登录");
+//        }
+        //获取当前的用户
+        Subject currentUser = SecurityUtils.getSubject();
+        Account account = (Account) currentUser.getPrincipal();
+        if(account == null) {
+            throw new CustomException("1001", "session已失效，请重新登录");
         }
         PageHelper.startPage(pageNum, pageSize);
         List<CommentInfo> all = commentInfoDao.findByContent(name, account.getLevel());

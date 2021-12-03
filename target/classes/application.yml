@@ -17,9 +17,9 @@ spring:
 
     #整合redis
   redis:
-#    host: 112.124.54.41
-    host: 112.124.54.41
-    port: 3377
+    host: 106.55.173.219
+#    host: 10.0.100.4
+    port: 13377
     database: 1
     lettuce:
       pool:
@@ -43,6 +43,11 @@ authority:
 
 logging:
   file: log/my.log
+
+web:
+  upload-path: d:/myfile/upload
+  front-path: d:/myfile/front
+
 
 
 
