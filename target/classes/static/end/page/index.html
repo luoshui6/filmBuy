@@ -55,7 +55,7 @@
                                     <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
                                 </a>
                                 <ul class="dropdown-menu dropdown-user">
-                                    <li><a href="javascript:void(0)" @click="personalPage"><i
+                                    <li><a href="javascript:void(0)" @click="personalPage1"><i
                                             class="fa fa-user fa-fw"></i> 个人信息</a>
                                     </li>
                                     <li class="divider"></li>
@@ -109,7 +109,7 @@
 								</li>
 
                                 <li>
-                                    <a href="javascript:void(0)" @click="personalPage"><i class="fa fa-user"></i>个人信息</a>
+                                    <a href="javascript:void(0)" @click="personalPage1"><i class="fa fa-user"></i>个人信息</a>
                                 </li>
                             </ul>
                         </li>
@@ -226,7 +226,7 @@
             this.drawLine();
         },
         methods: {
-            personalPage() {
+            personalPage1() {
                 axios.get('/auth').then(res => {
                     if (res.data.code === '0') {
                         this.user = res.data.data;

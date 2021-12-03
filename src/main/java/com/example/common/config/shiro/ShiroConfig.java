@@ -130,8 +130,8 @@ public class ShiroConfig {
      */
     public RedisManager redisManager() {
         RedisManager redisManager = new RedisManager();
-//        redisManager.setHost("10.0.100.4");
-        redisManager.setHost("106.55.173.219");
+        redisManager.setHost("10.0.100.4");
+//        redisManager.setHost("106.55.173.219");
         redisManager.setPort(13377);
 
 

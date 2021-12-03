@@ -6,7 +6,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: root
-    url: jdbc:mysql://106.55.173.219:13306/b_filmBuy?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false&serverTimezone=GMT%2b8
+    url: jdbc:mysql://10.0.100.4:13306/b_filmBuy?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false&serverTimezone=GMT%2b8
     type: com.alibaba.druid.pool.DruidDataSource
   thymeleaf:
     cache: false #关闭缓存
@@ -17,8 +17,8 @@ spring:
 
     #整合redis
   redis:
-    host: 106.55.173.219
-#    host: 10.0.100.4
+#    host: 106.55.173.219
+    host: 10.0.100.4
     port: 13377
     database: 1
     lettuce:
