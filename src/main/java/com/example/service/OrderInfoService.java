@@ -8,6 +8,7 @@ import com.example.dao.OrderGoodsRelDao;
 import com.example.dao.OrderInfoDao;
 import com.example.entity.*;
 import com.example.exception.CustomException;
+import com.example.util.SnowflakeIdWorker;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.stereotype.Service;
@@ -136,7 +137,9 @@ public class OrderInfoService {
         Long userId = orderInfo.getUserId();
         Integer level = orderInfo.getLevel();
         // 订单id：用户id + 当前年月日时分 + 4位流水号
-        String orderId = userId + DateUtil.format(new Date(), "yyyyMMddHHmm") + RandomUtil.randomNumbers(4);
+//        String orderId = userId + DateUtil.format(new Date(), "yyyyMMddHHmm") + RandomUtil.randomNumbers(4);
+        // 订单id：利用雪花算法生成
+        String orderId = String.valueOf(SnowflakeIdWorker.getOrderId(0, 0));
         orderInfo.setOrderId(orderId);
 
         Account userInfo = getUserInfo(userId, level);
