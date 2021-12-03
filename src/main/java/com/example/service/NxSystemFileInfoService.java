@@ -4,6 +4,7 @@ import com.example.dao.NxSystemFileInfoDao;
 import com.example.entity.NxSystemFileInfo;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -16,7 +17,7 @@ public class NxSystemFileInfoService {
     @Value("${authority.info}")
     private String authorityInfo;
 
-    @Resource
+   @Resource
     private NxSystemFileInfoDao nxSystemFileInfoDao;
 
     public NxSystemFileInfo add(NxSystemFileInfo nxSystemFileInfo) {
